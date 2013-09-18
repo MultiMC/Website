@@ -1,0 +1,28 @@
+{
+    "name": "multimc-website",
+    "title": "MultiMC-Website",
+    "description": "Website for the MultiMC project.",
+    "version": "0.0.1",
+    "homepage": "http://www.multimc.org",
+    "author": {
+        "name": "MultiMC Contributors",
+        "url": "http://www.multimc.org"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/multimc/multimc-website"
+    },
+    "licenses": [
+        {
+            "type": "BSD 3-clause",
+            "url": "https://github.com/multimc/multimc-website/master/LICENSE.md"
+        }
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "grunt-contrib-copy": "0.4.0",
+        "grunt": "~0.4.0"
+    },
+    "keywords": [],
+    "private": true
+}

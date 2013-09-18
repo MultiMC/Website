@@ -1402,7 +1402,7 @@ iframe {
   background: #fafafa;
   color: #444444;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .uk-panel-box .uk-panel-title {
   color: #444444;
@@ -1576,7 +1576,7 @@ iframe {
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 3px;
   background: #fafafa;
 }
 /*
@@ -2332,7 +2332,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-subnav-pill > li > span {
   padding: 3px 9px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /*
  * Hover
@@ -2493,7 +2493,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   text-align: center;
   /* 2 */
 
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /*
  * Links
@@ -2616,7 +2616,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   border-bottom-width: 0;
   color: #0077dd;
   text-decoration: none;
-  border-radius: 4px 4px 0 0;
+  border-radius: 3px 3px 0 0;
   text-shadow: 0 1px 0 #ffffff;
 }
 .uk-tab > li:nth-child(n+2) > a {
@@ -3103,7 +3103,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   color: #444444;
   -webkit-transition: all linear 0.2s;
   transition: all linear 0.2s;
-  border-radius: 4px;
+  border-radius: 3px;
   /* Focus state */
 
   /* Disabled state */
@@ -3406,7 +3406,7 @@ select.uk-form-width-mini {
   /* 5 */
 
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
+  border-radius: 3px;
   text-shadow: 0 1px 0 #ffffff;
 }
 /* Required for `a` elements */
@@ -3560,7 +3560,7 @@ a.uk-button {
   padding: 0 15px;
   line-height: 38px;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 /*
  * Behave like a block element and take the full width
@@ -5010,7 +5010,7 @@ a.uk-close:hover {
   background: #ebf7fd;
   color: #2d7091;
   border: 1px solid rgba(45, 112, 145, 0.3);
-  border-radius: 4px;
+  border-radius: 3px;
   text-shadow: 0 1px 0 #ffffff;
 }
 /*
@@ -5117,7 +5117,7 @@ a.uk-close:hover {
   padding: 4px;
   border: 1px solid #dddddd;
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /*
  * Hover state for `a` elements
@@ -5320,7 +5320,7 @@ a.uk-thumbnail:focus {
   /* 2 */
 
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /*
  * Add margin if adjacent element
@@ -5979,7 +5979,7 @@ input.uk-search-field {
 
   letter-spacing: normal;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /*
  * 1. Show dropdown
@@ -6119,7 +6119,7 @@ input.uk-search-field {
   color: #444444;
   left: -1px;
   border: 1px solid #dddddd;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 .uk-open > .uk-dropdown-navbar {
   -webkit-animation: uk-slide-top-fixed 0.2s ease-in-out;
@@ -6240,7 +6240,7 @@ input.uk-search-field {
   /* 4 */
 
   background: #ffffff;
-  border-radius: 4px;
+  border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 /* Only phones */
@@ -7225,7 +7225,15 @@ input.uk-search-field {
 /*
  * Tooltip
  */
-/* Defaults */
+/*
+ * Breakpoints
+
+
+@breakpoint-small: 0;
+@breakpoint-medium: 0;
+@breakpoint-large: 0;
+@breakpoint-xlarge: 960;
+ *//* Defaults */
 /*
  * Base component
  *
@@ -7381,7 +7389,7 @@ input.uk-search-field {
 /* Component
  ========================================================================== */
 .uk-navbar:not(.uk-navbar-attached) {
-  border-radius: 4px;
+  border-radius: 3px;
 }
 /* Sub-object: `uk-navbar-nav`
  ========================================================================== */
@@ -7394,8 +7402,8 @@ input.uk-search-field {
  * Apply same `border-radius` as `uk-navbar`
  */
 .uk-navbar:not(.uk-navbar-attached) .uk-navbar-nav:first-child > li:first-child > a {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 /*
  * Sub-modifier `uk-navbar-flip`
@@ -7411,8 +7419,8 @@ input.uk-search-field {
   border-bottom-left-radius: 0;
 }
 .uk-navbar:not(.uk-navbar-attached) .uk-navbar-flip .uk-navbar-nav:last-child > li:last-child > a {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 /*
  * Needed for hover
@@ -7470,7 +7478,7 @@ input.uk-search-field {
 /* Modifier: `uk-tab-bottom'
  ========================================================================== */
 .uk-tab-bottom > li > a {
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 3px 3px;
 }
 /* Modifier: `uk-tab-left', `uk-tab-right'
  ========================================================================== */
@@ -7480,13 +7488,13 @@ input.uk-search-field {
   	 * Modifier: `uk-tab-left'
   	 */
   .uk-tab-left > li > a {
-    border-radius: 4px 0 0 4px;
+    border-radius: 3px 0 0 3px;
   }
   /*
   	 * Modifier: `uk-tab-right'
   	 */
   .uk-tab-right > li > a {
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 3px 3px 0;
   }
 }
 /* Elements */
