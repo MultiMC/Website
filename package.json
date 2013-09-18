@@ -15,7 +15,7 @@
     "licenses": [
         {
             "type": "BSD 3-clause",
-            "url": "https://github.com/multimc/multimc-website/master/LICENSE.md"
+            "url": "https://github.com/multimc/multimc-website/blob/master/LICENSE.md"
         }
     ],
     "dependencies": {},
