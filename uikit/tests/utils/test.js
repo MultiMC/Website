@@ -21,7 +21,7 @@
     document.writeln('<script src="../src/js/switcher.js"></script>');
     document.writeln('<script src="../src/js/tab.js"></script>');
     document.writeln('<script src="../src/js/tooltip.js"></script>');
-    document.writeln('<link rel="stylesheet" href="../dist/css/uikit.min.css" data-compiled-css>');
+    document.writeln('<link rel="stylesheet" href="../dist/css/uikit.multimc.min.css" data-compiled-css>');
 
     var tests = [
             "alert",
@@ -59,8 +59,8 @@
             "tooltip",
             "utility"
         ],
-        themes     = { "default":"../src/less/uikit.less" },
-        theme      = localStorage["uikit.theme"] || 'default',
+        themes     = { "multimc":"../src/themes/multimc/uikit.less" },
+        theme      = localStorage["uikit.theme"] || 'multimc',
         direction  = localStorage["uikit.direction"] || 'ltr';
 
 
