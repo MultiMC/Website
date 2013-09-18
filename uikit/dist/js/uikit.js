@@ -1113,14 +1113,15 @@
 
     "use strict";
 
-    var $tooltip; // tooltip container
+    var $tooltip,   // tooltip container
+        tooltipdelay;
 
 
     var Tooltip = function(element, options) {
 
         var $this = this;
 
-        this.options = $.extend({}, this.options, options);
+        this.options = $.extend({}, Tooltip.defaults, options);
 
         this.element = $(element).on({
             "focus"     : function(e) { $this.show(); },
@@ -1139,20 +1140,16 @@
 
         tip: "",
 
-        options: {
-            "offset": 5,
-            "pos": "top",
-            "src": function() { return this.attr("title"); }
-        },
-
         show: function() {
 
+            if (tooltipdelay)     clearTimeout(tooltipdelay);
             if (!this.tip.length) return;
 
-            $tooltip.css({"top": -2000, "visibility": "hidden"}).show();
+            $tooltip.stop().css({"top": -2000, "visibility": "hidden"}).show();
             $tooltip.html('<div class="uk-tooltip-inner">' + this.tip + '</div>');
 
-            var pos      = $.extend({}, this.element.offset(), {width: this.element[0].offsetWidth, height: this.element[0].offsetHeight}),
+            var $this    = this,
+                pos      = $.extend({}, this.element.offset(), {width: this.element[0].offsetWidth, height: this.element[0].offsetHeight}),
                 width    = $tooltip[0].offsetWidth,
                 height   = $tooltip[0].offsetHeight,
                 offset   = typeof(this.options.offset) === "function" ? this.options.offset.call(this.element) : this.options.offset,
@@ -1169,40 +1166,115 @@
                 tmppos[0] = tmppos[0] == "left" ? "right" : "left";
             }
 
+            var variants =  {
+                "bottom"  : {top: pos.top + pos.height + offset, left: pos.left + pos.width / 2 - width / 2},
+                "top"     : {top: pos.top - height - offset, left: pos.left + pos.width / 2 - width / 2},
+                "left"    : {top: pos.top + pos.height / 2 - height / 2, left: pos.left - width - offset},
+                "right"   : {top: pos.top + pos.height / 2 - height / 2, left: pos.left + pos.width + offset}
+            };
 
-            switch (tmppos[0]) {
-                case 'bottom':
-                    $.extend(tcss, {top: pos.top + pos.height + offset, left: pos.left + pos.width / 2 - width / 2});
-                    break;
-                case 'top':
-                    $.extend(tcss, {top: pos.top - height - offset, left: pos.left + pos.width / 2 - width / 2});
-                    break;
-                case 'left':
-                    $.extend(tcss, {top: pos.top + pos.height / 2 - height / 2, left: pos.left - width - offset});
-                    break;
-                case 'right':
-                    $.extend(tcss, {top: pos.top + pos.height / 2 - height / 2, left: pos.left + pos.width + offset});
-                    break;
+            $.extend(tcss, variants[tmppos[0]]);
+
+            if (tmppos.length == 2) tcss.left = (tmppos[1] == 'left') ? (pos.left) : ((pos.left + pos.width) - width);
+
+            var boundary = this.checkBoundary(tcss.left, tcss.top, width, height);
+
+            if(boundary) {
+
+                switch(boundary) {
+                    case "x":
+
+                        if (tmppos.length == 2) {
+                            position = tmppos[0]+"-"+(tcss.left < 0 ? "left": "right");
+                        } else {
+                            position = tcss.left < 0 ? "right": "left";
+                        }
+
+                        break;
+
+                    case "y":
+                        if (tmppos.length == 2) {
+                            position = (tcss.top < 0 ? "bottom": "top")+"-"+tmppos[1];
+                        } else {
+                            position = (tcss.top < 0 ? "bottom": "top");
+                        }
+
+                        break;
+
+                    case "xy":
+                        if (tmppos.length == 2) {
+                            position = (tcss.top < 0 ? "bottom": "top")+"-"+(tcss.left < 0 ? "left": "right");
+                        } else {
+                            position = tcss.left < 0 ? "right": "left";
+                        }
+
+                        break;
+
+                }
+
+                tmppos = position.split("-");
+
+                $.extend(tcss, variants[tmppos[0]]);
+
+                if (tmppos.length == 2) tcss.left = (tmppos[1] == 'left') ? (pos.left) : ((pos.left + pos.width) - width);
             }
 
-            if (tmppos.length == 2) {
-                tcss.left = (tmppos[1] == 'left') ? (pos.left) : ((pos.left + pos.width) - width);
-            }
+            tooltipdelay = setTimeout(function(){
 
-            $tooltip.css(tcss).attr("class", "uk-tooltip uk-tooltip-" + position).show();
+                $tooltip.css(tcss).attr("class", "uk-tooltip uk-tooltip-" + position);
 
+                if ($this.options.animation) {
+                    $tooltip.css({opacity: 0, display: 'block'}).animate({opacity: 1}, parseInt($this.options.animation, 10) || 400);
+                } else {
+                    $tooltip.show();
+                }
+
+                tooltipdelay = false;
+            }, parseInt(this.options.delay, 10) || 0);
         },
 
         hide: function() {
             if(this.element.is("input") && this.element[0]===document.activeElement) return;
-            $tooltip.hide();
+
+            if(tooltipdelay) clearTimeout(tooltipdelay);
+
+            $tooltip.stop();
+
+            if (this.options.animation) {
+                $tooltip.fadeOut(parseInt(this.options.animation, 10) || 400);
+            } else {
+                $tooltip.hide();
+            }
         },
 
         content: function() {
             return this.tip;
+        },
+
+        checkBoundary: function(left, top, width, height) {
+
+            var axis = "";
+
+            if(left < 0 || left+width > window.innerWidth) {
+                axis += "x";
+            }
+
+            if(top < 0 || top+height > window.innerHeight) {
+                axis += "y";
+            }
+
+            return axis;
         }
 
     });
+
+    Tooltip.defaults = {
+        "offset": 5,
+        "pos": "top",
+        "animation": false,
+        "delay": 0, // in miliseconds
+        "src": function() { return this.attr("title"); }
+    };
 
     UI["tooltip"] = Tooltip;
 
@@ -1372,7 +1444,9 @@
 
     "use strict";
 
-    var Search = function(element, options) {
+    var renderers = {},
+
+        Search = function(element, options) {
 
         var $this = this;
 
@@ -1434,6 +1508,12 @@
         if (this.options.flipDropdown) {
             this.dropdown.parent().addClass('uk-dropdown-flip');
         }
+
+        this.dropdown.on("mouseover", ">li", function(){
+            $this.pick($(this));
+        });
+
+        this.renderer = new renderers[this.options.renderer](this);
     };
 
     $.extend(Search.prototype, {
@@ -1449,16 +1529,10 @@
             skipClass: 'uk-skip',
             loadingClass: 'uk-loading',
             filledClass: 'uk-active',
-            resultsHeaderClass: 'uk-nav-header',
-            moreResultsClass: '',
-            noResultsClass: '',
             listClass: 'results',
             hoverClass: 'uk-active',
-            msgResultsHeader: 'Search Results',
-            msgMoreResults: 'More Results',
-            msgNoResults: 'No results found',
-            onSelect: function(selected) { window.location = selected.data('choice').url; },
-            onLoadedResults: function(results) { return results; }
+            onLoadedResults: function(results) { return results; },
+            renderer: "default"
         },
 
         request: function(options) {
@@ -1517,22 +1591,6 @@
             }
         },
 
-        done: function(selected) {
-
-            if (!selected) {
-                this.form.submit();
-                return;
-            }
-
-            if (selected.hasClass(this.options.moreResultsClass)) {
-                this.form.submit();
-            } else if (selected.data('choice')) {
-                this.options.onSelect.apply(this, [selected]);
-            }
-
-            this.hide();
-        },
-
         trigger: function() {
 
             var $this = this, old = this.value, data = {};
@@ -1556,52 +1614,24 @@
             return this;
         },
 
+        done: function(selected) {
+
+            this.renderer.done(selected);
+        },
+
         suggest: function(data) {
 
             if (!data) return;
 
-            var $this  = this,
-                events = {
-                    'mouseover': function() { $this.pick($(this).parent()); },
-                    'click': function(e) {
-                        e.preventDefault();
-                        $this.done($(this).parent());
-                    }
-                };
-
             if (data === false) {
                 this.hide();
             } else {
+
                 this.selected = null;
+
                 this.dropdown.empty();
 
-                if (this.options.msgResultsHeader) {
-                    $('<li>').addClass(this.options.resultsHeaderClass + ' ' + this.options.skipClass).html(this.options.msgResultsHeader).appendTo(this.dropdown);
-                }
-
-                if (data.results && data.results.length > 0) {
-
-                    $(data.results).each(function(i) {
-
-                        var item = $('<li><a href="#">' + this.title + '</a></li>').data('choice', this);
-
-                        if (this["text"]) {
-                            item.find("a").append('<div>' + this.text + '</div>');
-                        }
-
-                        $this.dropdown.append(item);
-                    });
-
-                    if (this.options.msgMoreResults) {
-                        $('<li>').addClass('uk-nav-divider ' + $this.options.skipClass).appendTo($this.dropdown);
-                        $('<li>').addClass($this.options.moreResultsClass).html('<a href="#">' + $this.options.msgMoreResults + '</a>').appendTo($this.dropdown).on(events);
-                    }
-
-                    $this.dropdown.find("li>a").on(events);
-
-                } else if (this.options.msgNoResults) {
-                    $('<li>').addClass(this.options.noResultsClass + ' ' + this.options.skipClass).html('<a>' + this.options.msgNoResults + '</a>').appendTo(this.dropdown);
-                }
+                this.renderer.suggest(data);
 
                 this.show();
             }
@@ -1620,6 +1650,85 @@
             this.form.removeClass(this.options.loadingClass).removeClass("uk-open");
         }
     });
+
+    Search.addRenderer = function(name, klass) {
+        renderers[name] = klass;
+    };
+
+
+    var DefaultRenderer = function(search) {
+        this.search = search;
+        this.options = $.extend({}, DefaultRenderer.defaults, search.options);
+    };
+
+    $.extend(DefaultRenderer.prototype, {
+
+        done: function(selected) {
+
+            if (!selected) {
+                this.search.form.submit();
+                return;
+            }
+
+            if (selected.hasClass(this.options.moreResultsClass)) {
+                this.search.form.submit();
+            } else if (selected.data('choice')) {
+                window.location = selected.data('choice').url;
+            }
+
+            this.search.hide();
+        },
+
+        suggest: function(data) {
+
+           var $this  = this,
+               events = {
+                   'click': function(e) {
+                       e.preventDefault();
+                       $this.done($(this).parent());
+                   }
+               };
+
+            if (this.options.msgResultsHeader) {
+                $('<li>').addClass(this.options.resultsHeaderClass + ' ' + this.options.skipClass).html(this.options.msgResultsHeader).appendTo(this.search.dropdown);
+            }
+
+            if (data.results && data.results.length > 0) {
+
+                $(data.results).each(function(i) {
+
+                    var item = $('<li><a href="#">' + this.title + '</a></li>').data('choice', this);
+
+                    if (this["text"]) {
+                        item.find("a").append('<div>' + this.text + '</div>');
+                    }
+
+                    $this.search.dropdown.append(item);
+                });
+
+                if (this.options.msgMoreResults) {
+                    $('<li>').addClass('uk-nav-divider ' + $this.options.skipClass).appendTo($this.dropdown);
+                    $('<li>').addClass($this.options.moreResultsClass).html('<a href="#">' + $this.options.msgMoreResults + '</a>').appendTo($this.search.dropdown).on(events);
+                }
+
+                $this.search.dropdown.find("li>a").on(events);
+
+            } else if (this.options.msgNoResults) {
+                $('<li>').addClass(this.options.noResultsClass + ' ' + this.options.skipClass).html('<a>' + this.options.msgNoResults + '</a>').appendTo($this.search.dropdown);
+            }
+        }
+    });
+
+    DefaultRenderer.defaults = {
+        resultsHeaderClass: 'uk-nav-header',
+        moreResultsClass: '',
+        noResultsClass: '',
+        msgResultsHeader: 'Search Results',
+        msgMoreResults: 'More Results',
+        msgNoResults: 'No results found'
+    };
+
+    Search.addRenderer("default", DefaultRenderer);
 
     UI["search"] = Search;
 
