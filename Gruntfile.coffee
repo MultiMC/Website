@@ -22,11 +22,18 @@ module.exports = (grunt) ->
           src: ["*.html"]
           dest: "dist"
         ]
+    connect:
+      server:
+        options:
+          port: 8082
+          base: "dist"
+          keepalive: true
 
   
   # Load grunt tasks from NPM packages
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-watch"
+  grunt.loadNpmTasks "grunt-contrib-connect"
   
   # Register grunt tasks
   grunt.registerTask "default", ["copy"]
