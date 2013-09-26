@@ -1,11 +1,11 @@
 # MultiMC website
 
-Uses Grunt to compile UIkit/the website assets. The content generator itself is still undecided.
+Uses Grunt to compile UIkit/the website assets, and DocPad with Jade to generate the content.
 
-Run Grunt in the uikit folder and then in the main folder to compile what currently exists (or use "grunt watch" to automatically compile on changes). Output suitable for public use is compiled in to the dist folder.
+Run Grunt in the uikit folder to compile the stylesheets for the project. Do "docpad generate" in the docpad folder to generate the content. Run Grunt in the top-level folder to copy all the assets/content in to the dist folder for use.
 
 UIkit tests are available for the theme in uikit/tests.
 
 TODO:
 * Content
-* Static content generator
+* Automatic compilation from the top-level folder using "grunt watch"
