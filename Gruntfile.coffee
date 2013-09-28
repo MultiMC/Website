@@ -1,9 +1,12 @@
 module.exports = (grunt) ->
+
   "use strict"
   fs = require("fs")
   pkginfo = grunt.file.readJSON("package.json")
+
   grunt.initConfig
     pkg: pkginfo
+
     copy:
       uikit:
         files: [
@@ -17,25 +20,45 @@ module.exports = (grunt) ->
           src: ["uikit.min.js"]
           dest: "dist/assets/"
         ]
+
       docpad:
         files: [
           expand: true
           cwd: "docpad/out"
           src: ["*.html"]
           dest: "dist"
-        ]        
+        ]
+
     connect:
       server:
         options:
           port: 8082
           base: "dist"
-          keepalive: true
+          #keepalive: true
 
+    exec:
+      uikit:
+        cwd: "uikit"
+        command: "grunt"
+
+      docpad:
+        cwd: "docpad"
+        command: "docpad generate --env static"
+
+    watch:
+      uikit:
+        files: [ "uikit/src/**/*.less", "uikit/src/js/*.js" ]
+        tasks: [ "exec:uikit", "copy:uikit" ]
+
+      docpad:
+        files: [ "docpad/src/**/*" ]
+        tasks: [ "exec:docpad", "copy:docpad" ]
   
   # Load grunt tasks from NPM packages
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-connect"
+  grunt.loadNpmTasks "grunt-exec"
   
   # Register grunt tasks
-  grunt.registerTask "default", ["copy"]
+  grunt.registerTask "default", [ "connect", "watch" ]

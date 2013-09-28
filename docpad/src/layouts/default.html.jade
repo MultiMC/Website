@@ -6,5 +6,11 @@ html(lang="en")
         script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
         script(src="assets/uikit.min.js")
     body
+        nav.uk-navbar.uk-navbar-attached
+            ul.uk-navbar-nav
+                li.uk-active: a(href="/") Home
+                li: a(href="") ...
+                li: a(href="") ...
+
         h1= document.title
         != content
