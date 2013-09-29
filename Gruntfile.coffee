@@ -37,6 +37,9 @@ module.exports = (grunt) ->
           #keepalive: true
 
     exec:
+      githash:
+        command: "git rev-parse --verify HEAD > last_commit.html"
+
       uikit:
         cwd: "uikit"
         command: "grunt"
@@ -62,3 +65,4 @@ module.exports = (grunt) ->
   
   # Register grunt tasks
   grunt.registerTask "default", [ "connect", "watch" ]
+  grunt.registerTask "build", [ "exec", "copy" ]
