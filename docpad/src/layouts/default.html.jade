@@ -35,7 +35,13 @@ html(lang="en")
                         != content
             hr
             .uk-text-center
-                p Copyright &copy; 2013 MultiMC Contributors
+                p
+                    | Copyright &copy; 2013
+                    span.uk-visible-hover  MultiMC Contributors 
+                        span.uk-hidden
+                            | With 
+                            i.uk-icon-heart
+                            |  from Drayshak
                 p
                     i Revision: 
                         include ../../../last_commit.html
