@@ -7252,6 +7252,9 @@ h2 {
   margin-top: 34px;
   margin-bottom: 15px;
 }
+.heading-margin-top {
+  margin-top: 9.5px;
+}
 /*
  * Typography
  */

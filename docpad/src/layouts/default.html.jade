@@ -8,14 +8,24 @@ html(lang="en")
         script(src="assets/js/uikit.min.js")
 
     body
-        nav.uk-navbar.uk-navbar-attached
-            .uk-container.uk-container-center
-                a.uk-navbar-brand.uk-hidden-small(href="/") MultiMC
-                ul.uk-navbar-nav
-                    li: a(href="/about") About
-                    li: a(href="/blog") Blog
-                    li: a(href="") ...
-
         .uk-container.uk-container-center
-            h1= document.title
-            != content
+            .uk-grid
+                .uk-width-1-1
+                    h1 MultiMC
+                        small.uk-h2.uk-margin-left Manage Minecraft instances with ease            
+            .uk-grid(data-uk-grid-margin)
+                .uk-width-medium-1-4.uk-hidden-small
+                    ul.uk-nav.uk-nav-side(data-uk-nav)
+                        li.uk-nav-header Home
+                        li: a(href="#Overview") Overview
+                        li: a(href="#Features") Features
+                        li: a(href="#Download & Install") Download & Install
+                        li: a(href="#Open Source") Open Source
+                        li: a(href="#Screenshots") Screenshots
+                .uk-width-medium-3-4
+                    article.uk-article
+                        != content
+            hr
+            .uk-text-center
+                p Copyright &copy; 2013 MultiMC Contributors
+                p: a(href="https://github.com/MultiMC/MultiMC-Website/blob/master/LICENSE.md", target="_blank") License
