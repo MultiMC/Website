@@ -7243,6 +7243,13 @@ input.uk-search-field {
  ========================================================================== */
 /* Code and preformatted text
  ========================================================================== */
+h2 {
+  border-left: 3px solid #8ec73b;
+  line-height: 21px;
+  padding-left: 5px;
+  margin-top: 34px;
+  margin-bottom: 15px;
+}
 /* Layout */
 /*
  * Panel component

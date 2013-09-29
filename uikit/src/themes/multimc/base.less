@@ -30,3 +30,13 @@
 	border: 1px solid @theme_base-pre-border;
 	border-radius: 3px;
 }
+
+@custom-h2-line-height: 21px;
+
+h2 {
+	border-left: 3px solid @form-success-border;
+	line-height: @custom-h2-line-height;
+	padding-left: 5px;
+	margin-top: @base-heading-margin-top + (@base-h2-line-height - @custom-h2-line-height);
+	margin-bottom: @base-margin-vertical;
+}
