@@ -7258,6 +7258,15 @@ h2 {
 /*
  * Typography
  */
+h1 small {
+  color: rgba(68, 68, 68, 0.9);
+}
+/*
+ * Misc
+ */
+.top-bar {
+  padding-top: 0px;
+}
 /* Layout */
 /*
  * Panel component

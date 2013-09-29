@@ -11,8 +11,10 @@ html(lang="en")
     body
         .uk-container.uk-container-center
             .uk-grid
-                .uk-width-1-1
-                    h1 MultiMC
+                .uk-width-1-1.uk-display-inline-block.uk-margin-left.uk-margin-top
+                    img(src="images/infinity38.png", alt="MultiMC logo").uk-float-left
+                    h1.top-bar.uk-float-left.uk-margin-top-remove.uk-margin-left
+                        | MultiMC
                         small.uk-h2.uk-margin-left Manage Minecraft instances with ease            
             .uk-grid(data-uk-grid-margin)
                 .uk-width-medium-1-4.uk-hidden-small
@@ -23,6 +25,11 @@ html(lang="en")
                         li: a(href="#Download & Install") Download & Install
                         li: a(href="#Open Source") Open Source
                         li: a(href="#Screenshots") Screenshots
+
+                        li.uk-nav-header External
+                        li: a(href="http://multimc.myjetbrains.com/youtrack/issues", target="_blank") Issue Tracker
+                        li: a(href="http://ci.forkk.net/", target="_blank") CI
+                        li: a(href="http://www.minecraftforum.net/topic/1000645-", target="_blank") MCF Thread
                 .uk-width-medium-3-4
                     article.uk-article
                         != content
