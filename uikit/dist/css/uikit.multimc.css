@@ -484,10 +484,12 @@ html {
 }
 body {
   background: #ffffff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Droid Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
   font-weight: normal;
   line-height: 20px;
   color: #444444;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke: 0.1px;
 }
 /* Only phones */
 @media (max-width: 767px) {
@@ -634,7 +636,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 15px 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Droid Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
   font-weight: normal;
   color: #444444;
   text-transform: none;
@@ -7250,6 +7252,9 @@ h2 {
   margin-top: 34px;
   margin-bottom: 15px;
 }
+/*
+ * Typography
+ */
 /* Layout */
 /*
  * Panel component

@@ -7,7 +7,10 @@
 /* Body
  ========================================================================== */
 
-.hook-base-body() {}
+.hook-base-body() {
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke: 0.1px;
+}
 
 
 /* Code and preformatted text
@@ -40,3 +43,10 @@ h2 {
 	margin-top: @base-heading-margin-top + (@base-h2-line-height - @custom-h2-line-height);
 	margin-bottom: @base-margin-vertical;
 }
+
+/*
+ * Typography
+ */
+
+@base-body-font-family: "Droid Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
+@base-heading-font-family: "Droid Sans", "Trebuchet MS", Verdana, Arial, sans-serif;
