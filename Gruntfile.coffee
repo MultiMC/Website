@@ -12,12 +12,12 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "uikit/dist/css"
-          src: ["uikit.multimc.min.css"]
+          src: [ "uikit.multimc.min.css" ]
           dest: "dist/assets/css"
         ,
           expand: true
           cwd: "uikit/dist/js"
-          src: ["uikit.min.js"]
+          src: [ "uikit.min.js" ]
           dest: "dist/assets/js"        
         ]
 
@@ -25,7 +25,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "docpad/out"
-          src: ["*.html"]
+          src: [ "*.html", "*.ico" ]
           dest: "dist"
         ]
 
