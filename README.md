@@ -1,5 +1,7 @@
 # MultiMC website
 
+Development happens on the "develop" branch, "master" is considered appropriate for a live website.
+
 Uses Grunt to compile UIkit/the website assets, and DocPad with Jade to generate the content.
 
 You need Node.js, NPM and DocPad to compile and preview the website. Run "npm install" in the top-level, uikit and docpad folders before running grunt, it will install the other dependencies for you.
