@@ -3,16 +3,16 @@ html(lang="en")
     head
         title= document.title
         link(rel="shortcut icon", type="image/x-icon", href="/favicon.ico")
-        link(rel="stylesheet", href="assets/css/uikit.multimc.min.css")
+        link(rel="stylesheet", href="/assets/css/uikit.multimc.min.css")
         link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Droid+Sans")
         script(src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js")
-        script(src="assets/js/uikit.min.js")
+        script(src="/assets/js/uikit.min.js")
 
     body
         .uk-container.uk-container-center
             .uk-grid
                 .uk-width-1-1.uk-display-inline-block.uk-margin-left.uk-margin-top
-                    img(src="images/infinity38.png", alt="MultiMC logo").uk-float-left
+                    img(src="/images/infinity38.png", alt="MultiMC logo").uk-float-left
                     h1.top-bar.uk-float-left.uk-margin-top-remove.uk-margin-left
                         | MultiMC
                         small.uk-h2.uk-margin-left Manage Minecraft instances with ease            
@@ -20,19 +20,25 @@ html(lang="en")
                 .uk-width-medium-1-4.uk-hidden-small
                     ul.uk-nav.uk-nav-side(data-uk-nav)
                         li.uk-nav-header Home
-                        li: a(href="#Overview") Overview
-                        li: a(href="#Features") Features
-                        li: a(href="#Download & Install") Download & Install
-                        li: a(href="#Open Source") Open Source
-                        li: a(href="#Screenshots") Screenshots
+                        li: a(href="/") Overview
+                        li: a(href="/#Features") Features
+                        li: a(href="/#Download & Install") Download & Install
+                        li: a(href="/#Source Code") Source Code
+                        li: a(href="/#Screenshots") Screenshots
+
+                        li.uk-nav-header Blog
+                        li: a(href="/posts.html") Recent posts
+                        ul.uk-nav-sub 
+                            each post in getFilesAtPath("posts").toJSON().slice(1, 5).sort(function(a,b) { return (a.date > b.date) ? -1 : ((b.date > a.date) ? 1 : 0); } )
+                                li
+                                    a(href=post.url) #{post.title}
 
                         li.uk-nav-header External
                         li: a(href="http://multimc.myjetbrains.com/youtrack/issues", target="_blank") Issue Tracker
                         li: a(href="http://ci.forkk.net/", target="_blank") CI
                         li: a(href="http://www.minecraftforum.net/topic/1000645-", target="_blank") MCF Thread
                 .uk-width-medium-3-4
-                    article.uk-article
-                        != content
+                    article.uk-article!= content
             hr
             .uk-text-center
                 p

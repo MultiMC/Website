@@ -1,0 +1,12 @@
+---
+title: "MultiMC - Recent posts"
+layout: "default"
+isPage: true
+---
+
+h2.heading-margin-top Recent posts
+ul
+    each post, i in getFilesAtPath("posts").toJSON().slice(1).sort(function(a,b) { return (a.date > b.date) ? -1 : ((b.date > a.date) ? 1 : 0); } )
+        li
+            a(href=post.url) #{post.title}
+            i  Posted by #{post.author} on #{post.date}
