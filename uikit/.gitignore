@@ -1,7 +1,7 @@
-/dist/*.zip
 /node_modules
 /docs/fonts/ProximaNova-Light-webfont.*
 /docs/fonts/ProximaNova-Reg-webfont.*
+/dist
 *~
 *.diff
 *.patch
