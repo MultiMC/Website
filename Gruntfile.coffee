@@ -25,7 +25,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "docpad/out"
-          src: [ "**/*.html", "**/*.ico", "**/*.png", "**/*.js" ]
+          src: [ "**/*.html", "**/*.ico", "**/*.png", "**/*.js", "**/*.xml" ]
           dest: "dist"
         ]
 
