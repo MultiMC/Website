@@ -9,9 +9,9 @@ I thought I'd write a blog post discussing the current state of MultiMC, MultiMC
 
 First, we have a new, dedicated website, and you're looking at it! The idea was to keep it clean, simple and functional, and I think we've achieved that. Things might still change a bit but the framework is there for us to use.
 
-So who is "us"? [peterix](https://twitter.com/peterixxx) and myself ([@Drayshak](https://twitter.com/drayshak)) are pushing development of MultiMC 5 forwards, I've been working on the website, [Forkk](https://twitter.com/forkk13) is helping with infrastructure, and there have been notable contributions to the project from [@TakSuyu](https://twitter.com/TakSuyu), [Kilobyte](https://twitter.com/Stiepen22) and Orochimarufan. (If you think you've made a contribution that I've left out, tell me!).
+So who is "us"? [peterix](https://twitter.com/peterixxx) and myself ([@Drayshak](https://twitter.com/drayshak)) are pushing development of MultiMC 5 forward, I've been working on the website, [Forkk](https://twitter.com/forkk13) is helping with infrastructure, and there have been notable contributions to the project from [@TakSuyu](https://twitter.com/TakSuyu), [Kilobyte](https://twitter.com/Stiepen22) and Orochimarufan. (If you think you've made a contribution that I've left out, tell me!).
 
-Development of MultiMC 5 is going well, and we publish "test builds" regularly. We're changing our build system so for now you can find them on our IRC channel ([Esper/#MultiMC](http://mibbit.com/?channel=%23multimc&server=irc.esper.net)), but eventually they'll be published on this website.
+Development of MultiMC 5 is going well, and we publish "test builds" regularly. We're changing our build system so for now you can find them on our IRC channel ([Esper/#MultiMC](http://webchat.esper.net/?nick=&channels=MultiMC)), but eventually they'll be published on this website.
 
 The test builds have most of the core functionality implemented and should be fine for general use, but keep in mind that it might have some rough edges. Keep a copy of builds that work for you and report bugs (on IRC or using the [Issue Tracker](http://multimc.myjetbrains.com/youtrack/issues)). You can follow most of our progress on IRC or by using the [Dev Tracker](https://www.pivotaltracker.com/s/projects/869353).
 
