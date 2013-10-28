@@ -1,0 +1,33 @@
+---
+title: "FAQ"
+layout: "default"
+isPage: true
+---
+
+h2.heading-margin-top(id="FAQ") Frequently Asked Questions
+p Here's a list of answers to questions that we get asked a lot.
+
+ol
+	li Is this a "pirated launcher"?
+		p No. You need a premium Minecraft account, just like you do with the vanilla launcher. Yes, there's an offline mode, but it only works when you've successfully authenticated at least once with an account.
+
+	li How do I replace &lt;class file&gt; in my 1.6+ instance? 
+		p As of right now, you don't. Mojang have made it clear that they don't want people in the Jar, so we don't plan on supporting it. We will eventually, however, support loading custom libraries (our Forge integration is just a specific type of this).
+
+	li Why does my &lt;1.5.2 instance fail to load when I install Forge to it?
+		p
+			| This is a Forge issue which we'll have a workaround for soon (they have a set of libraries that you need to manually download). For now, please read their 
+			a(href="http://www.minecraftforge.net/forum/index.php/topic,20.0.html", target="_blank") EAQ
+			|  (the bit about failed downloads in the "common problems and solutions section").
+
+	li My &lt;window icon/window title/maximise/fullscreen&gt; options don't work in 1.6+
+		p We haven't implemented support for that yet, but we do plan on having it.
+
+	li Where's the Mac build?
+		p Nobody on the team has a Mac so we don't have builds for it yet. We're still sorting our build stuff out, it's coming soon.
+
+	li Why can't I select a version of Minecraft over 1.5.2?
+		p You're probably using MultiMC 4. Mojang fundamentally changed the way Minecraft is launched in later versions, and we decided to rewrite MultiMC to support it. You can get test builds of MultiMC 5 (which supports everything the vanilla launcher does) from the homepage.
+
+	li Where do I put my coremods in 1.6+?
+		p Forge now expects coremods to be in the same place as regular mods, so just stick them in the "Loader Mods" tab along with the other mods.
