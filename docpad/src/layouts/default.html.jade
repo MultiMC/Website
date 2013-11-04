@@ -11,6 +11,8 @@ html(lang="en")
         script var _sf_startpt=(new Date()).getTime()
 
     body
+        include ads/loader.html
+
         .uk-container.uk-container-center
             .uk-grid
                 .uk-width-1-1.uk-display-inline-block.uk-margin-left.uk-margin-top
@@ -44,6 +46,7 @@ html(lang="en")
                         li: a(href="http://www.minecraftforum.net/topic/1000645-", target="_blank") MCF Thread
                         li: a(href="http://webchat.esper.net/?nick=&channels=MultiMC", target="_blank") IRC Channel
                 .uk-width-medium-3-4
+                    include ads/top.html
                     article.uk-article!= content
             hr
             .uk-text-center
