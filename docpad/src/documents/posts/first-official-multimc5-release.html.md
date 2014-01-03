@@ -13,9 +13,7 @@ Whilst the builds have been stable enough for general use for a while now, we kn
 
 We'll be keeping an eye on the [IRC channel](http://webchat.esper.net/?nick=&channels=MultiMC) for bug reports, and if anything unexpected pops up we'll be around to fix it.
 
-MultiMC has some awesome people heading the project now in [@Forkk13](https://twitter.com/forkk13), [@peterixxx](https://twitter.com/peterixxx) and [@drayshak](https://twitter.com/drayshak) and we will continue to add features and polish things in the near future. We'd also like to thank the following people for the contributions they've made to the project: Orochimarufan, [@TakSuyu](https://twitter.com/TakSuyu), [Kilobyte](https://twitter.com/Stiepen22), Jan, [Robotbrain](https://twitter.com/skylordelros) and [@Rootbear75](https://twitter.com/rootbear75).
-
-The website could be under some strain for a few days as people download the new builds, so if things seem a bit slow, please have patience and try again in a minute or two.
+MultiMC has some awesome people heading the project now in [@Forkk13](https://twitter.com/forkk13), [@peterixxx](https://twitter.com/peterixxx) and [@drayshak](https://twitter.com/drayshak) and we will continue to add features and polish things in the near future. We'd also like to thank the following people for the contributions they've made to the project: Orochimarufan, [@TakSuyu](https://twitter.com/TakSuyu), [Kilobyte](https://twitter.com/Stiepen22), [@02JanDal](https://twitter.com/02JanDal), [Robotbrain](https://twitter.com/skylordelros) and [@Rootbear75](https://twitter.com/rootbear75).
 
 Have fun!   
 Drayshak
