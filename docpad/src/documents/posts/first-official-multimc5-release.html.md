@@ -2,7 +2,7 @@
 layout: post
 title: First official MultiMC 5 release!
 author: Drayshak
-date: 1388894715000
+date: 1388956224000
 ---
 
 We're excited to announce that the first official MultiMC 5 release is now available on the [homepage](/)!
