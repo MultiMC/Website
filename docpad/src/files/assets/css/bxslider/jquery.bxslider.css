@@ -19,11 +19,12 @@
 	margin: 0 auto 60px;
 	padding: 0;
 	*zoom: 1;
+	text-align: center;
 }
 
 .bx-wrapper img {
 	max-width: 100%;
-	display: block;
+	display: inline;
 }
 
 /** THEME
