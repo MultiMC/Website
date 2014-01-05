@@ -1,11 +1,9 @@
 ---
 layout: post
-title: DRAFT POST: First official MultiMC 5 release!
+title: First official MultiMC 5 release!
 author: Drayshak
-date: 1388756220000
+date: 1388894715000
 ---
-
-#DRAFT POST
 
 We're excited to announce that the first official MultiMC 5 release is now available on the [homepage](/)!
 
