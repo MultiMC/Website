@@ -13,14 +13,14 @@ html(lang="en")
         script var _sf_startpt=(new Date()).getTime()
 
     body
-        .uk-container.uk-container-center
-            .uk-grid
-                .uk-width-1-1.uk-display-inline-block.uk-margin-left.uk-margin-top
-                    a(href="/")
-                        img(src="/images/infinity38.png", alt="MultiMC logo").uk-float-left
-                        h1.top-bar.uk-float-left.uk-margin-top-remove.uk-margin-bottom-remove.uk-margin-left
-                            | MultiMC
-                            small.uk-h2.uk-margin-left Manage Minecraft instances with ease            
+        .uk-navbar.uk-navbar-attached
+            .uk-container.uk-container-center.uk-margin-top.uk-margin-bottom
+                a(href="/").uk-navbar-brand
+                    img(src="/images/infinity32.png", alt="MultiMC logo").uk-float-left
+                    h1.top-bar.uk-float-left.uk-margin-top-remove.uk-margin-bottom-remove.uk-margin-left
+                        | MultiMC
+                        small.uk-h2.uk-margin-left Manage Minecraft instances with ease             
+        .uk-container.uk-container-center.uk-margin-top     
             .uk-grid(data-uk-grid-margin)
                 .uk-width-medium-1-4.uk-hidden-small
                     ul.uk-nav.uk-nav-side(data-uk-nav)

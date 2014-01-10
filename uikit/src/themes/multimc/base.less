@@ -44,6 +44,11 @@ h2 {
 	margin-bottom: @base-margin-vertical;
 }
 
+h1 {
+	font-size: round(@base-h1-font-size * 0.8);
+}
+
+
 .heading-margin-top {
 	margin-top: round((@custom-h2-line-height / 2) - 1);
 }
@@ -57,6 +62,14 @@ h2 {
 
 h1 small {
 	color: fade(@global-color, 90%);
+}
+
+small.uk-h2 {
+	font-size: round(@base-h1-font-size * 0.5);
+}
+
+.uk-navbar-brand img {
+	padding-top: 3px;
 }
 
 /*
