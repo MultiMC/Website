@@ -8,7 +8,7 @@
 
         if($element.data("switcher")) return;
 
-        this.options = $.extend({}, this.options, options);
+        this.options = $.extend({}, Switcher.defaults, options);
 
         this.element = $element.on("click", this.options.toggler, function(e) {
             e.preventDefault();
@@ -19,10 +19,14 @@
 
             this.connect = $(this.options.connect).find(".uk-active").removeClass(".uk-active").end();
 
-            var active = this.element.find(this.options.toggler).filter(".uk-active");
+            var togglers = this.element.find(this.options.toggler),
+                active   = togglers.filter(".uk-active");
 
             if (active.length) {
                 this.show(active);
+            } else {
+                active = togglers.eq(0);
+                if (active.length) this.show(active);
             }
         }
 
@@ -30,11 +34,6 @@
     };
 
     $.extend(Switcher.prototype, {
-
-        options: {
-            connect: false,
-            toggler: ">*"
-        },
 
         show: function(tab) {
 
@@ -58,6 +57,11 @@
         }
 
     });
+
+    Switcher.defaults = {
+        connect : false,
+        toggler : ">*"
+    };
 
     UI["switcher"] = Switcher;
 

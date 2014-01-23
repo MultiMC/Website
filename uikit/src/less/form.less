@@ -1,34 +1,80 @@
-/*
- * Name:			Form
- * Description:		Defines styles for forms
- *
- * Component:		`uk-form`
- *
- * Sub-objects:		`uk-form-row`
- *					`uk-form-help-inline`
- *					`uk-form-help-block`
- *					`uk-form-label`
- *					`uk-form-controls`
- *					`uk-form-controls-condensed`
- *
- * Modifiers:		`uk-form-stacked`
- *					`uk-form-horizontal`
- *
- * Sub-modifiers:	`uk-form-danger`
- *					`uk-form-success`
- *					`uk-form-small`
- *					`uk-form-large`
- *					`uk-form-blank`
- *					`uk-form-width-mini`
- *					`uk-form-width-small`
- *					`uk-form-width-medium`
- *					`uk-form-width-large`
- *					`uk-form-controls-text`
- *
- ========================================================================== */
+// Name:            Form
+// Description:     Defines styles for forms
+//
+// Component:       `uk-form`
+//
+// Sub-objects:     `uk-form-row`
+//                  `uk-form-help-inline`
+//                  `uk-form-help-block`
+//                  `uk-form-label`
+//                  `uk-form-controls`
+//                  `uk-form-controls-condensed`
+//
+// Modifiers:       `uk-form-stacked`
+//                  `uk-form-horizontal`
+//
+// Sub-modifiers:   `uk-form-danger`
+//                  `uk-form-success`
+//                  `uk-form-small`
+//                  `uk-form-large`
+//                  `uk-form-blank`
+//                  `uk-form-width-mini`
+//                  `uk-form-width-small`
+//                  `uk-form-width-medium`
+//                  `uk-form-width-large`
+//                  `uk-form-controls-text`
+//
+// ========================================================================
 
 
-/* Component
+// Variables
+// ========================================================================
+
+@form-height:                                   30px;
+@form-small-height:                             25px;
+@form-large-height:                             40px;
+@form-small-font-size:                          12px;
+@form-large-font-size:                          16px;
+
+@form-border:                                   #ddd;
+@form-background:                               #fff;
+@form-color:                                    #444;
+@form-placeholder-color:                        #999;
+@form-focus-border:                             #99baca;
+@form-focus-background:                         #f5fbfe;
+@form-focus-color:                              #444;
+@form-disabled-border:                          #ddd;
+@form-disabled-background:                      #f5f5f5;
+@form-disabled-color:                           #999;
+
+@form-danger-border:                            #dc8d99;
+@form-danger-background:                        #fff7f8;
+@form-danger-color:                             #c91032;
+
+@form-success-border:                           #8ec73b;
+@form-success-background:                       #fafff2;
+@form-success-color:                            #539022;
+
+@form-blank-outline:                            #ddd;
+
+@form-mini-width:                               40px;
+@form-small-width:                              130px;
+@form-medium-width:                             200px;
+@form-large-width:                              500px;
+
+@form-legend-border:                            #ddd;
+@form-legend-font-size:                         18px;
+@form-legend-line-height:                       30px;
+
+@form-gutter:                                   15px;
+
+@form-icon-width:                               30px;
+@form-icon-font-size:                           14px;
+@form-icon-color:                               #999;
+
+
+/* ========================================================================
+   Component: Form
  ========================================================================== */
 
 /*
@@ -39,13 +85,14 @@
 
 /*
  * Controls
- * Exept for `range`, `radio`, `checkbox`, `file`, `submit`, `reset`, `button` and `image`
+ * Except for `range`, `radio`, `checkbox`, `file`, `submit`, `reset`, `button` and `image`
  * 1. Must be `height` because `min-height` is not working in OSX
- * 2. Responsiveness: Sets a maxium width relative to the parent to scale on narrower viewports
+ * 2. Responsiveness: Sets a maximum width relative to the parent to scale on narrower viewports
  */
 
 .uk-form select,
 .uk-form textarea,
+.uk-form input:not([type]),
 .uk-form input[type="text"],
 .uk-form input[type="password"],
 .uk-form input[type="datetime"],
@@ -60,32 +107,32 @@
 .uk-form input[type="search"],
 .uk-form input[type="tel"],
 .uk-form input[type="color"] {
-	height: @form-height; /* 1 */
-	max-width: 100%; /* 2 */
-	padding: 4px 6px;
-	border: 1px solid @form-border;
-	background: @form-background;
-	color: @form-color;
-	-webkit-transition: all linear 0.2s;
-	transition: all linear 0.2s;
-	.hook-form;
+    height: @form-height; /* 1 */
+    max-width: 100%; /* 2 */
+    padding: 4px 6px;
+    border: 1px solid @form-border;
+    background: @form-background;
+    color: @form-color;
+    -webkit-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+    .hook-form;
 
-	/* Focus state */
-	&:focus {
-		border-color: @form-focus-border;
-		outline: 0;
-		background: @form-focus-background;
-		color: @form-focus-color;
-		.hook-form-focus;
-	}
+    /* Focus state */
+    &:focus {
+        border-color: @form-focus-border;
+        outline: 0;
+        background: @form-focus-background;
+        color: @form-focus-color;
+        .hook-form-focus;
+    }
 
-	/* Disabled state */
-	&:disabled {
-		border-color: @form-disabled-border;
-		background-color: @form-disabled-background;
-		color: @form-disabled-color;
-		.hook-form-disabled;
-	}
+    /* Disabled state */
+    &:disabled {
+        border-color: @form-disabled-border;
+        background-color: @form-disabled-background;
+        color: @form-disabled-color;
+        .hook-form-disabled;
+    }
 }
 
 /*
@@ -108,17 +155,17 @@
  */
 
 .uk-form legend {
-	width: 100%;
-	padding-bottom: @form-gutter; /* 1 */
-	font-size: @form-legend-font-size;
-	line-height: @form-legend-line-height;
+    width: 100%;
+    padding-bottom: @form-gutter; /* 1 */
+    font-size: @form-legend-font-size;
+    line-height: @form-legend-line-height;
 }
 
 /* 1 */
 .uk-form legend:after {
-	content: "";
-	display: block;
-	border-bottom: 1px solid @form-legend-border;
+    content: "";
+    display: block;
+    border-bottom: 1px solid @form-legend-border;
 }
 
 
@@ -127,15 +174,15 @@
  ========================================================================== */
 
 .uk-form-small {
-	height: @form-small-height !important;
-	padding: 3px 3px !important;
-	font-size: @form-small-font-size;
+    height: @form-small-height !important;
+    padding: 3px 3px !important;
+    font-size: @form-small-font-size;
 }
 
 .uk-form-large {
-	height: @form-large-height !important;
-	padding: 8px 6px !important;
-	font-size: @form-large-font-size;
+    height: @form-large-height !important;
+    padding: 8px 6px !important;
+    font-size: @form-large-font-size;
 }
 
 
@@ -157,10 +204,10 @@
  */
 
 .uk-form-danger {
-	border-color: @form-danger-border !important;
-	background: @form-danger-background !important;
-	color: @form-danger-color !important;
-	.hook-form-danger;
+    border-color: @form-danger-border !important;
+    background: @form-danger-background !important;
+    color: @form-danger-color !important;
+    .hook-form-danger;
 }
 
 /*
@@ -168,10 +215,10 @@
  */
 
 .uk-form-success  {
-	border-color: @form-success-border !important;
-	background: @form-success-background !important;
-	color: @form-success-color !important;
-	.hook-form-success;
+    border-color: @form-success-border !important;
+    background: @form-success-background !important;
+    color: @form-success-color !important;
+    .hook-form-success;
 }
 
 
@@ -184,10 +231,10 @@
  */
 
 .uk-form-blank {
-	border: none !important;
-	background: none !important;
-	box-shadow: none !important;
-	outline: 1px dashed transparent !important;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    outline: 1px dashed transparent !important;
 }
 
 .uk-form-blank:focus { outline-color:@form-blank-outline !important; }
@@ -219,8 +266,8 @@ select.uk-form-width-mini { width: (@form-mini-width + 25px); } /* 1 */
 
 .uk-form-row:before,
 .uk-form-row:after {
-	content: " ";
-	display: table;
+    content: " ";
+    display: table;
 }
 
 .uk-form-row:after { clear: both; }
@@ -237,8 +284,8 @@ select.uk-form-width-mini { width: (@form-mini-width + 25px); } /* 1 */
  ========================================================================== */
 
 .uk-form-help-inline {
-	display: inline-block;
-	margin: 0 0 0 10px;
+    display: inline-block;
+    margin: 0 0 0 10px;
 }
 
 .uk-form-help-block { margin: 5px 0 0 0; }
@@ -267,9 +314,9 @@ select.uk-form-width-mini { width: (@form-mini-width + 25px); } /* 1 */
  ========================================================================== */
 
 .uk-form-stacked .uk-form-label {
-	display: block;
-	margin-bottom: 5px;
-	font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 
@@ -280,39 +327,69 @@ select.uk-form-width-mini { width: (@form-mini-width + 25px); } /* 1 */
 /* Only phones and tablets portrait */
 @media (max-width: @breakpoint-medium-max) {
 
-	.uk-form-horizontal .uk-form-label {
-		
-		/* Behave like `uk-form-stacked` */
-		display: block;
-		margin-bottom: 5px;
-		font-weight: bold;
-		
-	}
+    /* Behave like `uk-form-stacked` */
+    .uk-form-horizontal .uk-form-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
 
 }
 
 /* Only tablets and desktops */
 @media (min-width: @breakpoint-large) {
 
-	.uk-form-horizontal .uk-form-label {
-		width: 200px;
-		margin-top: 5px;
-		float: left;
-	}
+    .uk-form-horizontal .uk-form-label {
+        width: 200px;
+        margin-top: 5px;
+        float: left;
+    }
 
-	.uk-form-horizontal .uk-form-controls { margin-left: 215px; }
+    .uk-form-horizontal .uk-form-controls { margin-left: 215px; }
 
-	/* Better vertical alignment if controls are checkboxes and radio buttons with text */
-	.uk-form-horizontal .uk-form-controls-text { padding-top: 5px; }
+    /* Better vertical alignment if controls are checkboxes and radio buttons with text */
+    .uk-form-horizontal .uk-form-controls-text { padding-top: 5px; }
 
 }
 
 
-/* Hooks
+/* Sub-object: `uk-form-icon`
  ========================================================================== */
+
+.uk-form-icon {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+.uk-form-icon > [class*='uk-icon-'] {
+    position: absolute;
+    top: 50%;
+    width: @form-icon-width;
+    margin-top: round(@form-icon-font-size / -2);
+    font-size: @form-icon-font-size;
+    color: @form-icon-color;
+    text-align: center;
+}
+
+.uk-form-icon:not(.uk-form-icon-flip) > input { padding-left: @form-icon-width !important; }
+
+/*
+ * Sub-modifier: `uk-form-icon-flip`
+ */
+
+.uk-form-icon-flip > [class*='uk-icon-'] { right: 0; }
+.uk-form-icon-flip > input { padding-right: @form-icon-width !important; }
+
+
+// Hooks
+// ========================================================================
+
+.hook-form-misc;
 
 .hook-form() {}
 .hook-form-focus() {}
 .hook-form-disabled() {}
 .hook-form-danger() {}
 .hook-form-success() {}
+.hook-form-misc() {}

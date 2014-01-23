@@ -1,23 +1,41 @@
-/*
- * Name:			Text
- * Description:		Collection of useful text utility classes to style your content
- *
- * Component:		`uk-text-*`
- *
- ========================================================================== */
+// Name:            Text
+// Description:     Collection of useful text utility classes to style your content
+//
+// Component:       `uk-text-*`
+//
+// ========================================================================
 
+
+// Variables
+// ========================================================================
+
+@text-small-font-size:                          11px;
+@text-small-line-height:                        16px;
+@text-large-font-size:                          18px;
+@text-large-line-height:                        24px;
+
+@text-muted-color:                              #999;
+@text-info-color:                               #2d7091;
+@text-success-color:                            #659f13;
+@text-warning-color:                            #e28327;
+@text-danger-color:                             #d85030;
+
+
+/* ========================================================================
+   Component: Text
+ ========================================================================== */
 
 /* Size modifiers
  ========================================================================== */
 
 .uk-text-small {
-	font-size: @text-small-font-size;
-	line-height: @text-small-line-height;
+    font-size: @text-small-font-size;
+    line-height: @text-small-line-height;
 }
 
 .uk-text-large {
-	font-size: @text-large-font-size;
-	line-height: @text-large-line-height;
+    font-size: @text-large-font-size;
+    line-height: @text-large-line-height;
 }
 
 
@@ -30,11 +48,11 @@
 /* Color modifiers
  ========================================================================== */
 
-.uk-text-muted { color: @text-muted-color; }
-.uk-text-info { color: @text-info-color; }
-.uk-text-success { color: @text-success-color; }
-.uk-text-warning { color: @text-warning-color; }
-.uk-text-danger { color: @text-danger-color; }
+.uk-text-muted { color: @text-muted-color !important; }
+.uk-text-info { color: @text-info-color !important; }
+.uk-text-success { color: @text-success-color !important; }
+.uk-text-warning { color: @text-warning-color !important; }
+.uk-text-danger { color: @text-danger-color !important; }
 
 
 /* Alignment modifiers
@@ -50,13 +68,19 @@
  ========================================================================== */
 
 /*
+ * Prevent text from wrapping onto multiple lines
+ */
+
+.uk-text-nowrap { white-space: nowrap; }
+
+/*
  * Prevent text from wrapping onto multiple lines, and truncate with an ellipsis
  */
 
 .uk-text-truncate {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /*
@@ -64,9 +88,17 @@
  */
 
 .uk-text-break {
-	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
 }
+
+
+// Hooks
+// ========================================================================
+
+.hook-text-misc;
+
+.hook-text-misc() {}

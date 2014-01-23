@@ -2,8 +2,10 @@
 
     var Customizer = function($element, $options) {
 
-        var $select = $($options.select, $element), $sidebar = $($options.sidebar, $element), $advanced = $($options.advanced, $element), $style;
-
+        var $select   = $($options.select, $element),
+            $sidebar  = $($options.sidebar, $element),
+            $advanced = $($options.advanced, $element),
+            $style;
 
         this.$options = $options;
         this.$select  = $select;
@@ -73,13 +75,22 @@
 
         function loadStyle(style) {
 
-            var deferred = $.Deferred();
+            var deferred = $.Deferred(),
+                imports  = "";
 
             if (style.less) {
                 return deferred.resolve();
             }
 
-            $.less.resolveImports("@import url(" + style.url + ");").done(function(less) {
+            if($.isArray(style.url)) {
+                for (var i = 0; i < style.url.length; i++) {
+                    imports += "@import url(" + style.url[i] + ");";
+                }
+            } else {
+                imports  = "@import url(" + style.url + ");";
+            }
+
+            $.less.resolveImports(imports).done(function(less) {
                 $.ajax({"url": style.config, "cache": false, "dataType": "json"}).done(function(config) {
 
                     var vars = $.less.getVars(less);
@@ -157,7 +168,8 @@
                                     input.spectrum({
                                         "showInput": true,
                                         "showAlpha": true,
-                                        "color": value,
+                                        "preferredFormat": "hex6",
+                                        "color": (value=='inherit' ? '':value),
                                         "change": function(color) {
                                             if (color.toRgb().a < 1) {
                                                 input.val(color.toRgbString()).trigger("change");
@@ -168,7 +180,7 @@
                                                 spectrum = $.fn.spectrum.get(input.data("spectrum.id"));
                                                 spectrum.container.find('.sp-cancel').after($('<a href="#" class="sp-reset">reset</a>').on("click", function(e) {
                                                     e.preventDefault();
-                                                    spectrum.set(input.data("default"));
+                                                    spectrum.set(input.data("default")=="inherit" ? "rgba(0,0,0,0)":input.data("default"));
                                                     spectrum.hide();
                                                     input.val("");
                                                 }));

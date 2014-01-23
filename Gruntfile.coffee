@@ -11,7 +11,7 @@ module.exports = (grunt) ->
       uikit:
         files: [
           expand: true
-          cwd: "uikit/dist/css"
+          cwd: "uikit/themes/custom/multimc/dist"
           src: [ "uikit.multimc.min.css" ]
           dest: "dist/assets/css"
         ,
