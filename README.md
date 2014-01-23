@@ -11,5 +11,4 @@ Run "grunt" in the main folder to start a preview server at localhost:8082. Whil
 UIkit tests are available for the theme in uikit/tests.
 
 TODO:
-* Screenshots
-* Download stats
+* Show download stats
