@@ -1,6 +1,6 @@
 $(document).ready(function(){
     function updateDownloadCount() {
-        $.getJSON("/stats/download_count.json", function(data) {
+        $.getJSON("//multimc.org/stats/download_count.json", function(data) {
             var count = data["count"];
             if(count && count > 0) {
                 $('#download_count').html(count);
