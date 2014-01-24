@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Almost Flat",
+        "url": "../themes/default/almost-flat/uikit.less",
+        "config": "../themes/default/almost-flat/customizer.json",
+        "styles": {}
+    },
+    {
+        "name": "Default",
+        "url": "../themes/default/default/uikit.less",
+        "config": "../themes/default/default/customizer.json",
+        "styles": {}
+    },
+    {
+        "name": "Gradient",
+        "url": "../themes/default/gradient/uikit.less",
+        "config": "../themes/default/gradient/customizer.json",
+        "styles": {}
+    },
+    {
+        "name": "Multimc",
+        "url": "../themes/custom/multimc/uikit.less",
+        "config": "../themes/custom/multimc/customizer.json",
+        "styles": {}
+    }
+]

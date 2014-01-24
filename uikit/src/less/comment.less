@@ -1,20 +1,39 @@
-/*
- * Name:			Comment
- * Description:		Defines styles for comment threads
- *
- * Component:		`uk-comment`
- *
- * Sub-objects:		`uk-comment-header`
- *					`uk-comment-avatar`
- *					`uk-comment-title`
- *					`uk-comment-meta`
- *					`uk-comment-body`
- *					`uk-comment-list`
- *
- ========================================================================== */
+// Name:            Comment
+// Description:     Defines styles for comment threads
+//
+// Component:       `uk-comment`
+//
+// Sub-objects:     `uk-comment-header`
+//                  `uk-comment-avatar`
+//                  `uk-comment-title`
+//                  `uk-comment-meta`
+//                  `uk-comment-body`
+//                  `uk-comment-list`
+//                  `uk-comment-primary`
+//
+// ========================================================================
 
 
-/* Component
+// Variables
+// ========================================================================
+
+@comment-header-margin-bottom:                  15px;
+
+@comment-avatar-margin-right:                   15px;
+
+@comment-title-font-size:                       16px;
+@comment-title-line-height:                     22px;
+
+@comment-meta-color:                            #999;
+@comment-meta-font-size:                        11px;
+@comment-meta-line-height:                      16px;
+
+@comment-list-margin-top:                       15px;
+@comment-list-padding-left:                     100px;
+
+
+/* ========================================================================
+   Component: Comment
  ========================================================================== */
 
 
@@ -22,8 +41,8 @@
  ========================================================================== */
 
 .uk-comment-header { 
-	margin-bottom: @comment-header-margin-bottom;
-	.hook-comment-header;
+    margin-bottom: @comment-header-margin-bottom;
+    .hook-comment-header;
 }
 
 /*
@@ -32,8 +51,8 @@
 
 .uk-comment-header:before,
 .uk-comment-header:after {
-	content: " ";
-	display: table;
+    content: " ";
+    display: table;
 }
 
 .uk-comment-header:after { clear: both; }
@@ -43,9 +62,9 @@
  ========================================================================== */
 
 .uk-comment-avatar {
-	margin-right: @comment-avatar-margin-right;
-	float: left;
-	.hook-comment-avatar;
+    margin-right: @comment-avatar-margin-right;
+    float: left;
+    .hook-comment-avatar;
 }
 
 
@@ -53,10 +72,10 @@
  ========================================================================== */
 
 .uk-comment-title { 
-	margin: 5px 0 0 0;
-	font-size: @comment-title-font-size;
-	line-height: @comment-title-line-height;
-	.hook-comment-title; 
+    margin: 5px 0 0 0;
+    font-size: @comment-title-font-size;
+    line-height: @comment-title-line-height;
+    .hook-comment-title; 
 }
 
 
@@ -64,11 +83,11 @@
  ========================================================================== */
 
 .uk-comment-meta {
-	margin: 2px 0 0 0;
-	font-size: @comment-meta-font-size;
-	line-height: @comment-meta-line-height;
-	color: @comment-meta-color;
-	.hook-comment-meta;
+    margin: 2px 0 0 0;
+    font-size: @comment-meta-font-size;
+    line-height: @comment-meta-line-height;
+    color: @comment-meta-color;
+    .hook-comment-meta;
 }
 
 
@@ -86,24 +105,42 @@
  ========================================================================== */
 
 .uk-comment-list {
-	padding: 0;
-	list-style: none;
+    padding: 0;
+    list-style: none;
 }
 
 .uk-comment-list .uk-comment + ul {
-	margin: @comment-list-margin-top 0 0 0;
-	padding-left: @comment-list-padding-left;
-	list-style: none;
+    margin: @comment-list-margin-top 0 0 0;
+    list-style: none;
 }
 
 .uk-comment-list > li:nth-child(n+2),
 .uk-comment-list .uk-comment + ul > li:nth-child(n+2) { margin-top: @comment-list-margin-top; }
 
+/* Only tablets and desktops */
+@media (min-width: @breakpoint-medium) {
 
-/* Hooks
+    .uk-comment-list .uk-comment + ul { padding-left: @comment-list-padding-left; }
+    
+}
+
+
+/* Modifier `uk-comment-primary`
  ========================================================================== */
+
+ .uk-comment-primary {
+    .hook-comment-primary;
+}
+
+
+// Hooks
+// ========================================================================
+
+.hook-comment-misc;
 
 .hook-comment-header() {}
 .hook-comment-avatar() {}
 .hook-comment-title() {}
 .hook-comment-meta() {}
+.hook-comment-primary() {}
+.hook-comment-misc() {}
