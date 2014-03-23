@@ -2,7 +2,7 @@
 layout: post
 title: MultiMC 5 - 0.3 update
 author: Drayshak
-date: 0000000000000
+date: 1395581298000
 ---
 
 We're happy to announce a new version with a bunch of new features and bugfixes - MultiMC 5 Version 0.3!
