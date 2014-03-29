@@ -9,7 +9,8 @@ We're happy to announce a new version with a bunch of new features and bugfixes 
 
 Some of the changes include:
 * An improved instance view,
-* Overhauled 1.6+ loading, paving the way for easier Forge/LiteLoader support and new features,
+* Overhauled 1.6+ loading,
+* New patch based system for modifying instances,
 * Better offline mode,
 * Improved clarity in some of the dialogs (for example, it's clear when there are no Forge versions available),
 * Tooling support (including JProfiler, JVisualVM and MCEdit),
