@@ -2,7 +2,7 @@
 layout: post
 title: MultiMC 5 - 0.3 update
 author: Drayshak
-date: 1395846894000
+date: 1396133093000
 ---
 
 We're happy to announce a new version with a bunch of new features and bugfixes - MultiMC 5 Version 0.3!
@@ -15,11 +15,13 @@ Some of the changes include:
 * Improved clarity in some of the dialogs (for example, it's clear when there are no Forge versions available),
 * Tooling support (including JProfiler, JVisualVM and MCEdit),
 * Screenshot management and uploading,
-* Miscellaneous bugfixes.
+* Fixed encoding of escape sequences (eg \t \n) in config files,
+* Miscellaneous bugfixes,
+* Full changelog available on [GitHub](https://github.com/MultiMC/MultiMC5/blob/develop/changelog.yaml).
 
 Many thanks to [@peterixxx](https://twitter.com/peterixxx), [@02JanDal](https://twitter.com/02JanDal) and [Robotbrain](https://twitter.com/skylordelros) for implementing the vast majority of these changes - go give them <small><i class="uk-icon-heart" alt="<3"></i></small>!
 
-We're also [asking people](http://goo.gl/sXdLLr) what they next want in MultiMC - go fill the poll out so we can gauge how popular certain feature requests are.
+We're also asking people what they next want in MultiMC - [go fill the poll out](http://goo.gl/sXdLLr) so we can gauge how popular certain feature requests are.
 
 As always, if you encounter bugs, come ask us for help in the [IRC channel](http://webchat.esper.net/?nick=&channels=MultiMC).   
 [@Drayshak](https://twitter.com/drayshak)
