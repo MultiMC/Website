@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Heartbleed Vulnerability Update
+title: Heartbleed Vulnerability Update (fixed!)
 author: Drayshak
 date: 1397053264000
 ---
@@ -14,3 +14,5 @@ If you don't want to wait for the update tonight, you can replace three files in
 I'll also update the title of this blog post when we've pushed an updated version out.
 
 [@Drayshak](https://twitter.com/drayshak)
+
+__Edit:__ We've pushed new stable, release candidate and development versions out with the fix. Update as soon as you can to get it!
