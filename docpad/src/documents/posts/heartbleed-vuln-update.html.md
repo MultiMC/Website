@@ -5,7 +5,7 @@ author: Drayshak
 date: 1397053264000
 ---
 
-If you've used the internet in the last couple of days, you've probably heard about the [Heartbleed](http://heartbleed.com/) vulnerability. To keep it short, there's a vulnerability in a bunch of versions of OpenSSL that make it possible for servers or clients to make their counterparts expose system memory in 64kB blocks.
+If you've used the Internet in the last couple of days, you've probably heard about the [Heartbleed](http://heartbleed.com/) vulnerability. To keep it short, there's a vulnerability in a bunch of versions of OpenSSL that make it possible for servers or clients to make their counterparts expose system memory in 64kB blocks.
 
 MultiMC on Windows ships with a version that's vulnerable. As far as we can tell, the only people that could use the exploit are servers that we connect to, which are Mojang and ourselves. We're going to update A.S.A.P. and hope to get a build out with it tonight (US time).
 
