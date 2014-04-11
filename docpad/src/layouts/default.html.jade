@@ -37,7 +37,7 @@ html(lang="en")
                         li.uk-nav-header Blog
                         li: a(href="/posts.html") Recent posts
                         ul.uk-nav-sub 
-                            each post in getFilesAtPath("posts").toJSON().slice(1, 5).sort(function(a,b) { return (a.date > b.date) ? -1 : ((b.date > a.date) ? 1 : 0); } )
+                            each post in getFilesAtPath("posts").toJSON().sort(function(a,b) { return (a.date > b.date) ? -1 : ((b.date > a.date) ? 1 : 0); } ).slice(0, 5)
                                 li
                                     a(href=post.url) #{post.title}
 
