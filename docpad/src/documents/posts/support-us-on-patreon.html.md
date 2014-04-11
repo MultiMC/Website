@@ -5,7 +5,9 @@ author: Drayshak
 date: 1397177290000
 ---
 
-We've created a [Patreon account](http://www.patreon.com/multimc) as a way to support MultiMC and its development team! It lets you pledge any monthly amount you want, for perks (such as having your name in the MultiMC credits section) and to support us and the project.
+We've created a [Patreon account](http://www.patreon.com/multimc) as a way to support MultiMC and its development team!
+
+Patreon is a fundraising service, designed to let fans of something contribute to the people who make it. You can pledge any monthly amount you want, for perks (such as having your name in the MultiMC credits section) and to support us and the project.
 
 If we get to $100 a month we'll make this website totally advert free. Adverts suck but servers are expensive, and as such have been a necessary evil (until now, with Patreon).
 
