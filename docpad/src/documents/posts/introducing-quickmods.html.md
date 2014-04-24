@@ -2,7 +2,7 @@
 layout: post
 title: Introducing QuickMods - A better way to install mods
 author: 02JanDal, Forkk
-date: 1398350503
+date: 1398382544000
 ---
 
 Hello from the MultiMC development team! We have an exciting announcement today. For a while, one of our developers, Jan ([@02JanDal](https://twitter.com/02JanDal)), has been working on a system for easily downloading and installing mods. The system is called QuickMod, and today we're excited to finally be able to show off an early proof of concept.
