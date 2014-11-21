@@ -2,7 +2,7 @@
 layout: post
 title: Version 0.4 out - Jar mods, UI changes, and more!
 author: 02JanDal
-date: 
+date: 2014-09-15
 ---
 
 We've just released MultiMC 5, version 0.4!
