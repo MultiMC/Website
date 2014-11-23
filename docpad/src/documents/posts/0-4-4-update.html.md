@@ -32,7 +32,7 @@ Since 0.4.0 we shipped two alternative themes with MultiMC. This update includes
 
 ## Technic
 
-Not related to the new release, but we recently had some discussions [GenPage](https://twitter.com/Gen_Page) and the [Technic](http://technicpack.net) team, and we got the permission from them to download and install modpacks 
+Not related to the new release, but we recently had some discussions with [GenPage](https://twitter.com/Gen_Page) and the [Technic](http://technicpack.net) team, and we got the permission from them to download and install modpacks 
 from the Technic Platform, right from within MultiMC! [@peterixxx](https://twitter.com/peterixxx) has already started to work on this feature, take a look at the screenshot below. We're also discussing how we can combine this 
 with QuickMods, so: Exciting times ahead!
 
