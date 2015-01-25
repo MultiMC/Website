@@ -25,7 +25,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: "docpad/out"
-          src: [ "**/*.html", "**/*.ico", "**/*.png", "**/*.js", "**/*.xml", "**/*.css" ]
+          src: [ "**/*.html", "**/*.ico", "**/*.png", "**/*.js", "**/*.xml", "**/*.css", "**/*.gif" ]
           dest: "dist"
         ]
 
@@ -33,8 +33,8 @@ module.exports = (grunt) ->
       server:
         options:
           port: 8082
-          base: "dist"
-          #keepalive: true
+          base: 'dist/'
+          livereload: true
 
     exec:
       githash:
@@ -59,6 +59,8 @@ module.exports = (grunt) ->
 
     uncss:
       dist:
+        options:
+          htmlroot: 'dist'
         files:
           'dist/assets/css/uikit.multimc.min.css': [ 'dist/*.html' ]
 

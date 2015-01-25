@@ -1,5 +1,5 @@
 //- vim: set expandtab ts=4 sw=4 :
-doctype 5
+doctype html
 html(lang="en")
     head
         title= document.title
@@ -38,7 +38,7 @@ html(lang="en")
                         li.uk-nav-header Blog
                         li: a(href="/posts.html") Recent posts
                         ul.uk-nav-sub 
-                            each post in getFilesAtPath("posts").toJSON().sort(function(a,b) { return (a.date > b.date) ? -1 : ((b.date > a.date) ? 1 : 0); } ).slice(0, 5)
+                            each post in getFilesAtPath("posts/").toJSON().sort(function(a,b) { return (a.date > b.date) ? -1 : ((b.date > a.date) ? 1 : 0); } ).slice(0, 5)
                                 li
                                     a(href=post.url) #{post.title}
 
@@ -49,12 +49,12 @@ html(lang="en")
                         li: a(href="http://www.minecraftforum.net/topic/1000645-", target="_blank") MCF Thread
                         li: a(href="http://webchat.esper.net/?nick=&channels=MultiMC", target="_blank") IRC Channel
                 .uk-width-medium-3-4
-                    include ads/top.html
+                    //include ads/top.html
                     article.uk-article!= content
             hr
             .uk-text-center
                 p
-                    | Copyright &copy; 2013-2014 MultiMC Contributors
+                    | Copyright &copy; 2013-2015 MultiMC Contributors
                     br
                     small
                         | With 
