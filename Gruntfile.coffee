@@ -33,8 +33,8 @@ module.exports = (grunt) ->
       server:
         options:
           port: 8082
-          base: "dist"
-          #keepalive: true
+          base: 'dist/'
+          livereload: true
 
     exec:
       githash:

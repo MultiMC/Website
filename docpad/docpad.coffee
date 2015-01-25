@@ -18,8 +18,9 @@ docpadConfig = {
 
     plugins:
         rss:
-            collection: 'posts'
-            url: '/rss.xml'
+            default:
+                collection: 'posts'
+                url: '/rss.xml'
 }
 
 # Export the DocPad Configuration
