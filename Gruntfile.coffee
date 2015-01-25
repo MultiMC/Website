@@ -59,6 +59,8 @@ module.exports = (grunt) ->
 
     uncss:
       dist:
+        options:
+          htmlroot: 'dist'
         files:
           'dist/assets/css/uikit.multimc.min.css': [ 'dist/*.html' ]
 
