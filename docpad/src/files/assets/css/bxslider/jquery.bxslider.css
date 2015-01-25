@@ -22,7 +22,11 @@
 }
 
 .bx-wrapper img {
-	margin: 0 auto;
+	display: block;
+}
+
+.bx-wrapper li {
+	text-align: center;
 }
 
 /** THEME
