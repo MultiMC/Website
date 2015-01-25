@@ -26,6 +26,10 @@
 	display: inline !important;
 }
 
+.bx-wrapper li {
+	text-align: center;
+}
+
 /** THEME
 ===================================*/
 
