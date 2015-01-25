@@ -22,11 +22,8 @@
 }
 
 .bx-wrapper img {
-	display: block;
-}
-
-.bx-wrapper li {
-	text-align: center;
+	margin: auto 0;
+	display: inline !important;
 }
 
 /** THEME
