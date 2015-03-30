@@ -57,16 +57,8 @@ module.exports = (grunt) ->
         files: [ "docpad/src/**/*" ]
         tasks: [ "exec:docpad", "copy:docpad" ]
 
-    uncss:
-      dist:
-        options:
-          htmlroot: 'dist'
-        files:
-          'dist/assets/css/uikit.multimc.min.css': [ 'dist/*.html' ]
-
   
   # Load grunt tasks from NPM packages
-  grunt.loadNpmTasks "grunt-uncss"
   grunt.loadNpmTasks "grunt-contrib-copy"
   grunt.loadNpmTasks "grunt-contrib-watch"
   grunt.loadNpmTasks "grunt-contrib-connect"
@@ -74,4 +66,4 @@ module.exports = (grunt) ->
   
   # Register grunt tasks
   grunt.registerTask "default", [ "connect", "watch" ]
-  grunt.registerTask "build", [ "exec", "copy", "uncss" ]
+  grunt.registerTask "build", [ "exec", "copy" ]
