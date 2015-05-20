@@ -29,11 +29,15 @@ No bees were involved in this release.
 
 We've added some simple modpack import and export functionality into this version. You can export instance as minimal zip files using the handy export dialog that lets you pick which files to export and even remembers them for the next time:
 
-->![Export Instance dialog](/images/export1.png)<-
+<p align="center">
+  <img src="/images/export1.png" alt="Export Instance dialog"/>
+</p>
 
 And the instance creation dialog lets you pick local and remote pack zip files instead of just Minecraft versions:
 
-->![New Instance from modpack](/images/import1.png)<-
+<p align="center">
+  <img src="/images/import1.png" alt="New Instance from modpack"/>
+</p>
 
 This should be expanded upon in the (hopefully) near future.
 
@@ -41,7 +45,9 @@ This should be expanded upon in the (hopefully) near future.
 
 Version lists got a new facelift and now highlight the latest (with a bug icon) and recommended (with a star icon) versions.
 
-->![Improved version lists](/images/version_lists1.png)<-
+<p align="center">
+  <img src="/images/version_lists1.png" alt="Improved version lists"/>
+</p>
 
 Same applies to the list that presents the detected java versions. The best one detected will be on top of the list. This should make it super easy to decide which one to use.
 
