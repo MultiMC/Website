@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Update to 0.4.7, what 0.4.7 should have been.
+title: Update to 0.4.7, what 0.4.6 should have been.
 author: peterix
 date: 2015-06-01
 ---
