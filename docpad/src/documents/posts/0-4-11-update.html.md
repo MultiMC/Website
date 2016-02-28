@@ -45,7 +45,8 @@ Considering the generally huge gaps between the last releases, the future of Mul
 
 All the suggestions have been processed and are [now available on the MultiMC workflowy list](https://workflowy.com/s/2EyDMcp7CU).
 
-This release will be shortly followed by one that further cleans up the version file code and brings it in line with the latest changes from Mojang.
-The poll about what should be the focus of future releases is not up yet, so feel free to review the list(s) and contact us on IRC, reddit, discord or through github issues.
+This release will be shortly followed by one that further cleans up the version file code and brings it in line with the latest changes from Mojang. You can look at the planned changes [here](https://workflowy.com/s/4BkdTJIsPm).
+
+The poll about what should be the focus of future releases is not up yet, so feel free to review the list(s) and contact me on IRC, reddit, discord or through github issues.
 
 [@peterixxx](https://twitter.com/peterixxx)
