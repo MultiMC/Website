@@ -8,3 +8,5 @@
 /dist
 last_commit.html
 npm-debug.log
+.directory
+*.kdev4
