@@ -5,7 +5,7 @@ author: peterix
 date: 2017-01-14
 ---
 
-There are many improvements in this release - the biggest one is ability to run multiple instances simultaneously. There is also basic themeing support, a better first run experience and more bugfixes than you can shake a stick at.
+There are many improvements in this release - the biggest one is the ability to run multiple instances simultaneously. There is also basic themeing support, a better first run experience and more bugfixes than you can shake a stick at.
 
 <p align="center">
   <img src="/images/screenshots/0.5.0-linux.png" alt="MultiMC5 0.5.0 with the Dark theme."/>
@@ -19,20 +19,24 @@ The focus of the next release will be modpacks and integration with modpack plat
 
 You can look forward to these:
 
-* Forge and Liteloader will no longer be added to the instance as patch files, MultiMC will instead manage a separate list of component versions.
+* Forge and Liteloader will no longer be added to the instance as patch files, MultiMC will instead manage separate lists of component versions.
 * Actual modpack support (this is the prerequisite for everything else).
 * Treating the exported instances as modpacks.
 * Inclusion of suggested Java settings (like the absolute minimum of memory needed to launch a modpack).
 * Tracking of optional mods (both enabled and disabled by default).
 * Tracking of server mods (both enabled and disabled by default).
-* Integration of Technic platform (and Solder).
+* Full integration of Technic platform (and Solder).
 * Downloading and installing of Curse modpacks.
+* Ability to track arbitrary folders as instances or instancer lists.
+* Possibly also integration with MCUpdater and AT Launcher.
 
-Not everything might end up in the same release though. I'd like to keep the releases small.
+Not everything might end up in the same release though, and not necessarily in the same order. I'd like to keep the releases small.
 
 All the existing suggestions are [available on the MultiMC workflowy list](https://workflowy.com/s/2EyDMcp7CU).
 
 The actual planning for the next release will happen on [this list](https://workflowy.com/s/E3Wo.yNRoPn2Wix).
+
+If you want the project to continue and expand, please [support it on Patron](https://www.patreon.com/multimc)!
 
 [@peterixxx](https://twitter.com/peterixxx)
 
