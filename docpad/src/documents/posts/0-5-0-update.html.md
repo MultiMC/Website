@@ -36,7 +36,7 @@ All the existing suggestions are [available on the MultiMC workflowy list](https
 
 The actual planning for the next release will happen on [this list](https://workflowy.com/s/E3Wo.yNRoPn2Wix).
 
-**If you want the project to continue and expand, please [support it on Patron](https://www.patreon.com/multimc)!**
+**If you want the project to continue and expand, please [support it on Patreon](https://www.patreon.com/multimc)!**
 
 [@peterixxx](https://twitter.com/peterixxx)
 
