@@ -12,7 +12,7 @@ mods which are still available from their official sources. For mods which are
 no longer available, we will provide our own download links.
 
 <p align="center">
-  <img src="/images/screenshots/mcarchive-linux.png" alt="The site currently has only a few mods, but we'll be adding more soon."/>
+  <img src="/images/mcarchive-first.png" alt="The site currently has only a few mods, but we'll be adding more soon."/>
 </p>
 
 The site currently has only a few mods, but we'll be adding more soon.
