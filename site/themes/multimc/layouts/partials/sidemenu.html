@@ -1,0 +1,33 @@
+<div class="uk-width-medium-1-4 uk-hidden-small">
+    <ul data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}" class="uk-nav uk-nav-side">
+        <li class="uk-nav-header">Home</li>
+        <li><a href="/">Overview</a></li>
+        <li><a href="/#Features">Features</a></li>
+        <li><a href="/#Screenshots">Screenshots</a></li>
+        <li><a href="/#Download%20&amp;%20Install">Download &amp; Install</a></li>
+        <li><a href="/#Source%20Code">Source Code</a></li>
+        <li><a href="http://www.patreon.com/multimc">Support us on Patreon</a></li>
+        <li><a href="/#Discord">Discord server</a></li>
+        <li><a href="/#Spotlights">Spotlights</a></li>
+
+        <li class="uk-nav-header">Blog</li>
+        <li><a href="/posts.html">Recent posts</a></li>
+        <li style="list-style: none; display: inline">
+            <ul class="uk-nav-sub">
+                {{ range first 5 ( where .Site.Pages "Type" "posts") }}
+                    {{ .Render "menu" }}
+                {{ end }}
+            </ul>
+        </li>
+
+        <li class="uk-nav-header">External links</li>
+        <li><a href="https://github.com/MultiMC/MultiMC5/wiki/FAQ">FAQ on Github</a></li>
+        <li><a href="https://www.reddit.com/r/MultiMC/" target="_blank">MultiMC subreddit</a></li>
+        <li><a href="https://discord.gg/0k2zsXGNHs0fE4Wm" target="_blank">Voice/Chat on Discord</a></li>
+        <li><a href="http://webchat.esper.net/?nick=&amp;channels=MultiMC" target="_blank">Chat on IRC</a></li>
+        <li><a href="http://www.minecraftforum.net/topic/1000645-" target="_blank">MCF Thread</a></li>
+        <li><a href="https://github.com/MultiMC/MultiMC5/issues" target="_blank">Bug Tracker</a></li>
+        <li><a href="https://workflowy.com/s/2EyDMcp7CU" target="_blank">TODO list</a></li>
+        <li><a href="http://ci.multimc.org/" target="_blank">CI Server</a></li>
+    </ul>
+</div>

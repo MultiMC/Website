@@ -1,8 +1,0 @@
-/node_modules
-*~
-*.diff
-*.patch
-.DS_Store
-.project
-.settings
-/out

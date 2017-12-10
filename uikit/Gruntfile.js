@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
             var lessconf = {
                 "docsmin": {
-                    options: { paths: ["docs/less"], cleancss: true },
+                    options: { paths: ["docs/less"], compress: true },
                     files: { "docs/css/uikit.docs.min.css": ["docs/less/uikit.less"] }
                 }
             },
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
                             }
 
                             lessconf[t+"min"] = {
-                                "options": { paths: [themepath], cleancss: true},
+                                "options": { paths: [themepath], compress: true},
                                 "files": filesmin
                             };
 
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
                   lessconf["addon-"+f] = {options: { paths: ['addons/src/'+f] }, files: {} };
                   lessconf["addon-"+f].files["dist/addons/css/"+f+".css"] = [addon];
 
-                  lessconf["addon-min-"+f] = {options: { paths: ['addons/src/'+f], cleancss: true }, files: {} };
+                  lessconf["addon-min-"+f] = {options: { paths: ['addons/src/'+f], compress: true }, files: {} };
                   lessconf["addon-min-"+f].files["dist/addons/css/"+f+".min.css"] = [addon];
 
                   // look for theme overrides
@@ -105,7 +105,7 @@ module.exports = function(grunt) {
                          lessconf["addon-"+f+"-"+theme.name] = {options: { paths: [theme.path] }, files: {} };
                          lessconf["addon-"+f+"-"+theme.name].files[distpath+"/"+f+".css"] = [override];
 
-                         lessconf["addon-min-"+f+"-"+theme.name] = {options: { paths: [theme.path], cleancss: true }, files: {} };
+                         lessconf["addon-min-"+f+"-"+theme.name] = {options: { paths: [theme.path], compress: true }, files: {} };
                          lessconf["addon-min-"+f+"-"+theme.name].files[distpath+"/"+f+".min.css"] = [override];
 
                        } else {
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
                           lessconf["addon-"+f+"-"+theme.name] = {options: { paths: [theme.path] }, files: {} };
                           lessconf["addon-"+f+"-"+theme.name].files[distpath+"/"+f+"."+theme.name+".css"] = [override];
 
-                          lessconf["addon-min-"+f+"-"+theme.name] = {options: { paths: [theme.path], cleancss: true }, files: {} };
+                          lessconf["addon-min-"+f+"-"+theme.name] = {options: { paths: [theme.path], compress: true }, files: {} };
                           lessconf["addon-min-"+f+"-"+theme.name].files[distpath+"/"+f+"."+theme.name+".min.css"] = [override];
 
                        }
@@ -333,6 +333,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks("grunt-contrib-compress");
     grunt.loadNpmTasks("grunt-contrib-watch");
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks("grunt-banner");
 
     // Register grunt tasks

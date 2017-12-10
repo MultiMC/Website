@@ -1,0 +1,12 @@
+baseURL = "https://multimc.org/"
+languageCode = "en-us"
+title = "MultiMC"
+theme = "multimc"
+uglyurls = true
+
+disableKinds= ["taxonomy","taxonomyTerm","sitemap"]
+
+[outputFormats]
+[outputFormats.RSS]
+mediatype = "application/rss"
+baseName = "rss"

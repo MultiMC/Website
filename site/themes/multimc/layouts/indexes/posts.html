@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+    <h2 class="heading-margin-top">Recent posts</h2>
+
+    <ul>
+        {{ range ( where .Data.Pages "Type" "posts") }}
+            {{ .Render "li" }}
+        {{ end }}
+    </ul>
+{{ partial "footer.html" . }}
