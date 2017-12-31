@@ -116,11 +116,11 @@ So, happy New Year everyone, let the madness begin!
 
 - Tweaker list in metadata now overrides the order of already present tweakers.
 
-    This allows running Minecrift/Vivecraft.
+    This allows running [Vivecraft](http://www.vivecraft.org/). Official support will hopefully follow.
 
 - Instance icons can now be in the SVG format. Also, aspect ratio of SVG icons is now preserved in the instance toolbar.
 
-- [GH-1082](https://github.com/MultiMC/MultiMC5/issues/1082): Is is now possible to disable and enable version components (packages) similarly to mods.
+- [GH-1082](https://github.com/MultiMC/MultiMC5/issues/1082): It is now possible to disable and enable version components (packages) similarly to mods.
 
 - A new material design / flat icon theme has been added.
 
