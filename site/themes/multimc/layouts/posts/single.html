@@ -3,7 +3,7 @@
 
         <h2 class="heading-margin-top">{{ .Title }}</h2>
 
-        <p class="uk-article-meta">Posted by {{ .Params.author }} on {{ .Date }}</p>
+        <p class="uk-article-meta">Posted by {{ .Params.author }} on {{ .Date.Format "Jan 2, 2006" }}</p>
 
         <div class="uk-margin-top">
             {{ .Content }}
