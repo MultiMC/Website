@@ -1,7 +1,7 @@
 ---
 title: MultiMC 0.6.2 released!
 author: peterix
-date: 2018-04-09
+date: 2018-04-08
 ---
 
 This release contains some bugfixes, general UI polish and the beginnings of direct modpack platform integrations.
