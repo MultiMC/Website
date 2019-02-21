@@ -1,7 +1,7 @@
 ---
 title: 0.6.5 - translation UI and legacy sound fixes
 author: peterix
-date: 2019-02-21
+date: 2019-02-20
 ---
 
 Finalizing the translation workflow improvements and adding fixes for sounds missing in old game versions.
