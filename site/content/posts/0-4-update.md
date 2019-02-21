@@ -1,5 +1,5 @@
 ---
-title: Version 0.4 out - Jar mods, UI changes, and more!
+title: 0.4 out - Jar mods, UI changes, and more!
 author: 02JanDal
 date: 2014-09-15
 ---

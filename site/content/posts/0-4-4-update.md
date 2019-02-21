@@ -1,5 +1,5 @@
 ---
-title: Update to 0.4.5, Translations, Themes, and Technic
+title: 0.4.5 - Translations, Themes, and Technic
 author: 02JanDal
 date: 2014-11-21
 ---

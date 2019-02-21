@@ -1,5 +1,5 @@
 ---
-title: Update to 0.4.11 - OSX 10.7 fix and workaround for Minecraft 1.9 compatibility
+title: 0.4.11 - OSX 10.7 fix and workaround for Minecraft 1.9 compatibility
 author: peterix
 date: 2016-02-28
 ---

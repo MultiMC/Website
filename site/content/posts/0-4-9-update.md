@@ -1,5 +1,5 @@
 ---
-title: Update to 0.4.9 - the Windows wifi fix
+title: 0.4.9 - the Windows wifi fix.
 author: peterix
 date: 2016-01-20
 ---

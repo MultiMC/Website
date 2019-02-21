@@ -1,5 +1,5 @@
 ---
-title: MultiMC 0.5.0 - Running multiple instances at the same time!
+title: 0.5.0 - Running multiple instances at the same time!
 author: peterix
 date: 2017-01-14
 ---

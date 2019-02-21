@@ -1,5 +1,5 @@
 ---
-title: MultiMC 5 - 0.3 update
+title: 0.3 - The big feature update.
 author: Drayshak
 date: 2014-03-29T23:44:53+01:00
 ---

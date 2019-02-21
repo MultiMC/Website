@@ -1,5 +1,5 @@
 ---
-title: Update to 0.4.8
+title: 0.4.8 - Worlds and more.
 author: peterix
 date: 2016-01-17
 ---

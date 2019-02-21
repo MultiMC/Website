@@ -1,5 +1,5 @@
 ---
-title: MultiMC 0.5.1 - Bugfixes
+title: 0.5.1 - Bugfixes.
 author: peterix
 date: 2017-02-12
 ---

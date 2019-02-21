@@ -1,5 +1,5 @@
 ---
-title: MultiMC 0.6.3 - the big sync.
+title: 0.6.3 - The Big Sync
 author: peterix
 date: 2018-12-26
 ---

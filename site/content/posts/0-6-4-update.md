@@ -1,5 +1,5 @@
 ---
-title: MultiMC 0.6.4 - better translation workflow and new FTB API location.
+title: 0.6.4 - better translation workflow and new FTB API location
 author: peterix
 date: 2019-01-06
 ---

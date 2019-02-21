@@ -1,5 +1,5 @@
 ---
-title: Update to 0.4.6, Bug fixes and improvements!
+title: 0.4.6 - Bug fixes and improvements!
 author: peterix
 date: 2015-05-20
 ---

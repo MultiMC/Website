@@ -1,5 +1,5 @@
 ---
-title: MultiMC 0.6.5 - translation UI and legacy sound fixes.
+title: 0.6.5 - translation UI and legacy sound fixes
 author: peterix
 date: 2019-02-21
 ---

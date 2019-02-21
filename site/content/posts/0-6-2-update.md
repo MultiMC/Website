@@ -1,5 +1,5 @@
 ---
-title: MultiMC 0.6.2 released!
+title: 0.6.2 Released!
 author: peterix
 date: 2018-04-08
 ---

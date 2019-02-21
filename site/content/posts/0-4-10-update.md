@@ -1,5 +1,5 @@
 ---
-title: Update to 0.4.10 - Another wifi fix
+title: 0.4.10 - Another wifi fix
 author: peterix
 date: 2016-01-22
 ---
