@@ -1,21 +1,24 @@
 {{ partial "header.html" . }}
 <article class="uk-article">
     <h2 id="Overview" class="heading-margin-top">Overview</h2>
-    <p>MultiMC is a free, open source launcher for Minecraft. It allows you to have multiple, cleanly separated instances of Minecraft (each with their own mods, texture packs, saves, etc) and helps you manage them and their associated options with a simple and powerful interface.</p>
+    <p>MultiMC is a free, open source launcher for Minecraft. It allows you to have multiple, cleanly separated instances of Minecraft (each with their own mods, resource packs, saves, etc) and helps you manage them and their associated options with a simple and powerful interface.</p>
     <p>Download links for the latest version, MultiMC 5, are below.</p>
     <h2 id="Features">Features</h2>
     <ul>
-        <li>Manage multiple instances of Minecraft at once</li>
-        <li>Start Minecraft with a custom resolution</li>
-        <li>Change Java's runtime options (including memory options)</li>
-        <li>Shows Minecraft's console output in a colour coded window</li>
-        <li>Kill Minecraft easily if it crashes / freezes</li>
-        <li>Custom icons and groups for instances</li>
-        <li>Forge integration (automatic installation, version downloads, mod management)</li>
-        <li>Minecraft world management</li>
-        <li>Import and export Minecraft instances to share them with anyone</li>
-        <li>Supports every version of Minecraft that the vanilla launcher does</li>
+        <li>Manage multiple isolated instances of Minecraft, keeping them clean.</li>
+        <li>Drill into the details - see the logs, mods and everything else easily.</li>
+        <li>No surprises - MultiMC aims to stay predictable and do what you tell it to do.</li>
+        <li>Fine control over Java settings and runtimes. Each instance has settings overrides that you can enable on top of the global settings.</li>
+        <li>MultiMC game logs come with extra information that helps diagnose problems, and they are color coded.</li>
+        <li>Support for running old versions the way they were released, instead of relying on compatibility hacks.</li>
+        <li>Kill Minecraft easily if it crashes / freezes.</li>
+        <li>MultiMC is extremely lightweight, enabling it to run in the background and keeping an eye on the game even on ancient machines where every megabyte of memory matters.</li>
+        <li>Easy installation of common mod loaders - Forge, Fabric and LiteLoader (and likely more incoming).</li>
+        <li>Minecraft world and resource/texture pack management.</li>
+        <li>Import and export of Minecraft instances to share them with anyone.</li>
+        <li>Import modpacks from many platforms - CurseForge, Technic, AT, FTB (both legacy and new). The more, the merrier.</li>
     </ul>
+
     <h2 id="Screenshots">Screenshots</h2>
     <ul class="bxslider">
         <li><img src="/images/screenshots/main.png" alt="Main window"/></li>
@@ -24,29 +27,30 @@
         <li><img src="/images/screenshots/console.png" alt="Console"/></li>
         <li><img src="/images/screenshots/settings.png" alt="Settings"/></li>
     </ul>
+
     <h2 id="Download">Download & Install</h2>
     <p>Choose the download for your operating system below, extract the archive to a new folder and run it. If you're using Linux, remember to make it executable before you try to run it.</p>
     <div data-uk-grid-margin="data-uk-grid-margin" data-uk-grid-match="{target:'.uk-panel'}" class="uk-grid">
         <div class="uk-width-medium-1-3">
-        <div class="uk-panel uk-panel-box">
-            <h3 class="uk-panel-title"><i class="uk-icon-windows uk-icon-small"></i> Windows</h3>
-            <a href="https://files.multimc.org/downloads/mmc-stable-win32.zip" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (32/64-bit)</a>
-        </div>
-        </div>
-        <div class="uk-width-medium-1-3">
-        <div class="uk-panel uk-panel-box">
-            <h3 class="uk-panel-title"><i class="uk-icon-apple uk-icon-small"></i> Mac OS X (10.7+)</h3>
-            <a href="https://files.multimc.org/downloads/mmc-stable-osx64.tar.gz" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (64-bit)</a>
-        </div>
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title"><i class="uk-icon-windows uk-icon-small"></i> Windows</h3>
+                <a href="https://files.multimc.org/downloads/mmc-stable-win32.zip" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (32/64-bit)</a>
+            </div>
         </div>
         <div class="uk-width-medium-1-3">
-        <div class="uk-panel uk-panel-box">
-            <h3 class="uk-panel-title"><i class="uk-icon-linux uk-icon-small"></i> Linux</h3>
-            <a href="https://files.multimc.org/downloads/multimc_1.5-1.deb" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (Ubuntu)</a>
-            <a href="https://aur.archlinux.org/packages/multimc5" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> AUR Package (Arch Linux)</a>
-            <a href="https://files.multimc.org/downloads/mmc-stable-lin32.tar.gz" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (Generic 32-bit)</a>
-            <a href="https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (Generic 64-bit)</a>
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title"><i class="uk-icon-apple uk-icon-small"></i> Mac OS X (10.7+)</h3>
+                <a href="https://files.multimc.org/downloads/mmc-stable-osx64.tar.gz" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (64-bit)</a>
+            </div>
         </div>
+        <div class="uk-width-medium-1-3">
+            <div class="uk-panel uk-panel-box">
+                <h3 class="uk-panel-title"><i class="uk-icon-linux uk-icon-small"></i> Linux</h3>
+                <a href="https://files.multimc.org/downloads/multimc_1.5-1.deb" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (Ubuntu)</a>
+                <a href="https://aur.archlinux.org/packages/multimc5" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> AUR Package (Arch Linux)</a>
+                <a href="https://files.multimc.org/downloads/mmc-stable-lin32.tar.gz" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (Generic 32-bit)</a>
+                <a href="https://files.multimc.org/downloads/mmc-stable-lin64.tar.gz" class="uk-button uk-button-expand uk-button-success"><i class="uk-icon-download"></i> Download (Generic 64-bit)</a>
+            </div>
         </div>
     </div>
     <p>MultiMC requires Qt5 to be installed on linux. If you don't have it, you may have to install the following packages, depending on distribution:</p>
@@ -56,42 +60,53 @@
         <li>CentOS/Fedora/RHEL: <tt>qt5-qtbase</tt></li>
         <li>Ubuntu/Debian: <tt>qt5-default</tt></li>
     </ul>
+
     <h2 id="DownloadDevelop">Download & Install the development version</h2>
     <p>The <b>development version</b> usually has extra fixes and features incuded, but <b>may not be stable yet</b>. If you use it, stay in touch on our discord server!</p>
     <div data-uk-grid-margin="data-uk-grid-margin" data-uk-grid-match="{target:'.uk-panel'}" class="uk-grid">
         <div class="uk-width-medium-1-3">
-        <div class="uk-panel uk-panel-box uk-panel-box-secondary">
-            <h3 class="uk-panel-title"><i class="uk-icon-windows uk-icon-small"></i> Windows</h3>
-            <a href="https://files.multimc.org/downloads/mmc-develop-win32.zip" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (32/64-bit)</a>
-        </div>
-        </div>
-        <div class="uk-width-medium-1-3">
-        <div class="uk-panel uk-panel-box uk-panel-box-secondary">
-            <h3 class="uk-panel-title"><i class="uk-icon-apple uk-icon-small"></i> Mac OS X (10.7+)</h3>
-            <a href="https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (64-bit)</a>
-        </div>
+            <div class="uk-panel uk-panel-box uk-panel-box-secondary">
+                <h3 class="uk-panel-title"><i class="uk-icon-windows uk-icon-small"></i> Windows</h3>
+                <a href="https://files.multimc.org/downloads/mmc-develop-win32.zip" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (32/64-bit)</a>
+            </div>
         </div>
         <div class="uk-width-medium-1-3">
-        <div class="uk-panel uk-panel-box uk-panel-box-secondary">
-            <h3 class="uk-panel-title"><i class="uk-icon-linux uk-icon-small"></i> Linux</h3>
-            <a href="https://aur.archlinux.org/packages/multimc-git" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> AUR Package (Arch Linux)</a>
-            <a href="https://files.multimc.org/downloads/mmc-develop-lin32.tar.gz" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (Generic 32-bit)</a>
-            <a href="https://files.multimc.org/downloads/mmc-develop-lin64.tar.gz" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (Generic 64-bit)</a>
+            <div class="uk-panel uk-panel-box uk-panel-box-secondary">
+                <h3 class="uk-panel-title"><i class="uk-icon-apple uk-icon-small"></i> Mac OS X (10.7+)</h3>
+                <a href="https://files.multimc.org/downloads/mmc-develop-osx64.tar.gz" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (64-bit)</a>
+            </div>
         </div>
+        <div class="uk-width-medium-1-3">
+            <div class="uk-panel uk-panel-box uk-panel-box-secondary">
+                <h3 class="uk-panel-title"><i class="uk-icon-linux uk-icon-small"></i> Linux</h3>
+                <a href="https://aur.archlinux.org/packages/multimc-git" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> AUR Package (Arch Linux)</a>
+                <a href="https://files.multimc.org/downloads/mmc-develop-lin32.tar.gz" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (Generic 32-bit)</a>
+                <a href="https://files.multimc.org/downloads/mmc-develop-lin64.tar.gz" class="uk-button uk-button-expand"><i class="uk-icon-download"></i> Download (Generic 64-bit)</a>
+            </div>
         </div>
     </div>
+
     <h2 id="Source">Source Code</h2>
     <p>The source code for MultiMC (and this website) is hosted at <a href="https://www.github.com/MultiMC/MultiMC5/">GitHub</a>.</p>
     <p>If you want to build MultiMC yourself, check out the <a href="https://github.com/MultiMC/MultiMC5/blob/develop/BUILD.md">Build guide</a>.</p>
+
     <h2 id="Patreon">Support us on Patreon!</h2>
-    <p>We're running a <a href="http://www.patreon.com/multimc" target="_blank">Patreon campaign</a> so that we can continue to pay for our server hosting costs, and make a little bit of money from this project which we put so much of our time into. $5 gets you a mention in the credits of the app, and if we can maintain at least $100 a month total, we'll be able to keep the website ad-free!</p>
+    <p>We're running a <a href="http://www.patreon.com/multimc" target="_blank">Patreon campaign</a> so that we can continue to pay for our server hosting costs, and invest into new hardware and server infrastructure. $5 gets you a mention in the credits of the app along with a Discord role, and if we can maintain at least $100 a month total, we'll be able to keep the website ad-free!</p>
     <a href="http://www.patreon.com/multimc" target="_blank"><img src="/images/patreon_name_banner.png" style="width: 200px;" alt="Main window"/></a>
+
     <h2 id="Discord">Discord server</h2>
-    <p>You can talk to us directly on our discord server. Just click join!</p>
+    <p>You can talk to us directly on our discord server. <a href="https://discord.gg/multimc" target="_blank">Just click join!</a></p>
     <iframe src="https://discordapp.com/widget?id=132965178051526656&amp;theme=dark" width="350" height="500"></iframe>
     <p>Just understand that we're most likely busy with Real Work&trade; and Real Life&trade; most of the time.</p>
-    <h2 id="Spotlights">Spotlights</h2>
-    <p><a href="https://twitter.com/Wylkervids" target="target">Wylker </a>made a spotlight of MultiMC 5 for us! It contains some basic usage and outlines the core features. Watch it below!</p>
-    <iframe width="640" height="360" src="//www.youtube.com/embed/d71DAFlHOXg?rel=0" allowfullscreen="allowfullscreen"></iframe><script src="/assets/js/bxslider/bxslider_start.js"></script>
+
+    <script src="/assets/js/bxslider/bxslider_start.js"></script>
+
+    <h2 id="Branding">Branding, identifying marks and custom builds...</h2>
+    <p>MultiMC is released under the Apache 2 license, which gives you the full access to the source code. What it doesn't give you is the right to use the name (MultiMC) or logo (infinity symbol on the side view of a block of grass) in any custom builds or forks of the project.</p>
+    <p>However, as long as you only redistribute the unmodified binary builds from <a href="https://multimc.org">multimc.org</a>, you may use the following files for the purpose of linux packaging and/or giving the user(s) a shortcut for launching the application.</p>
+    <ul>
+        <li>The logo, in SVG format: <a href=""></a></li>
+        <li>The <pre>.desktop</pre> file: <a href=""></a></li>
+    </ul>
 </article>
 {{ partial "footer.html" . }}
