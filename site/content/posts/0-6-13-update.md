@@ -45,13 +45,13 @@ Similar approach got attempted on Windows, aiming to fix various display scaling
 
 ### Modpack platforms
 
-In general, the modpack platform pages have been made more consistent with each other ([GH-3118](https://github.com/MultiMC/MultiMC5/issues/3118), [GH-3720](https://github.com/MultiMC/MultiMC5/issues/3720), [GH-3731](https://github.com/MultiMC/MultiMC5/issues/3731)).
+In general, the modpack platform pages have been made more consistent with each other ([GH-3118](https://github.com/MultiMC/Launcher/issues/3118), [GH-3720](https://github.com/MultiMC/Launcher/issues/3720), [GH-3731](https://github.com/MultiMC/Launcher/issues/3731)).
 
 - FTB improvements:
 
     - Modpack file downloads are now checked with checksums and cached.
 
-    - [GH-1949](https://github.com/MultiMC/MultiMC5/issues/1949): Allow Legacy FTB and FTB pack downloads to be aborted.
+    - [GH-1949](https://github.com/MultiMC/Launcher/issues/1949): Allow Legacy FTB and FTB pack downloads to be aborted.
 
 - CurseForge improvements:
 
@@ -61,11 +61,11 @@ In general, the modpack platform pages have been made more consistent with each 
 
     - Added sorting
 
-    - [GH-3667](https://github.com/MultiMC/MultiMC5/issues/3667): Added version selection
+    - [GH-3667](https://github.com/MultiMC/Launcher/issues/3667): Added version selection
 
-    - [GH-3611](https://github.com/MultiMC/MultiMC5/issues/3611): Added ability to install beta versions
+    - [GH-3611](https://github.com/MultiMC/Launcher/issues/3611): Added ability to install beta versions
 
-    - [GH-3633](https://github.com/MultiMC/MultiMC5/issues/3633): When a CurseForge pack is available for multiple Minecraft versions, we assume the latest one.
+    - [GH-3633](https://github.com/MultiMC/Launcher/issues/3633): When a CurseForge pack is available for multiple Minecraft versions, we assume the latest one.
 
 - ATLauncher improvements:
 
@@ -73,13 +73,13 @@ In general, the modpack platform pages have been made more consistent with each 
 
     - Fabric loader packs should now work.
 
-    - [GH-3764](https://github.com/MultiMC/MultiMC5/issues/3764): Only client mods are installed now for ATL packs.
+    - [GH-3764](https://github.com/MultiMC/Launcher/issues/3764): Only client mods are installed now for ATL packs.
 
     - Improved error handling
 
     - Optional mods are supported.
 
-    - [GH-1949](https://github.com/MultiMC/MultiMC5/issues/1949): Allow ATLauncher pack downloads to be aborted
+    - [GH-1949](https://github.com/MultiMC/Launcher/issues/1949): Allow ATLauncher pack downloads to be aborted
 
 
 - Fixed bugs in FTB platform search.
@@ -90,7 +90,7 @@ In general, the modpack platform pages have been made more consistent with each 
 
     We're going to aim for fixing it in time for 1.18. Thankfully, 1.17 is more of a in-between release, so go play some 1.16.x packs!
 
-- [GH-2529](https://github.com/MultiMC/MultiMC5/issues/2529): On macOS, MultiMC will ask to move all the instance data to a new `Data` folder in order to fix long load times caused by macOS checking all files.
+- [GH-2529](https://github.com/MultiMC/Launcher/issues/2529): On macOS, MultiMC will ask to move all the instance data to a new `Data` folder in order to fix long load times caused by macOS checking all files.
 
 - Detection of a large amount of various Java runtime flavors have been added.
 
@@ -114,13 +114,13 @@ In general, the modpack platform pages have been made more consistent with each 
 
 - Languages in the translations list are now sorted by their two/three letter key
 
-- [GH-3450](https://github.com/MultiMC/MultiMC5/issues/3450): Displaying and recording gameplay time is now optional and can be turned off.
+- [GH-3450](https://github.com/MultiMC/Launcher/issues/3450): Displaying and recording gameplay time is now optional and can be turned off.
 
-- [GH-3930](https://github.com/MultiMC/MultiMC5/issues/3930): MultiMC can now track the gameplay time of the last session.
+- [GH-3930](https://github.com/MultiMC/Launcher/issues/3930): MultiMC can now track the gameplay time of the last session.
 
-- [GH-3033](https://github.com/MultiMC/MultiMC5/issues/3033): The version pages of instances now have a filter bar.
+- [GH-3033](https://github.com/MultiMC/Launcher/issues/3033): The version pages of instances now have a filter bar.
 
-- [GH-2971](https://github.com/MultiMC/MultiMC5/issues/2971): UI descriptions of texture and resource packs no longer mention mods.
+- [GH-2971](https://github.com/MultiMC/Launcher/issues/2971): UI descriptions of texture and resource packs no longer mention mods.
 
 - Quick and dirty minimum Java runtime versions checks have been added. This needs to be expanded in the future.
 

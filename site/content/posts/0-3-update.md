@@ -17,7 +17,7 @@ Some of the changes include:
 * Screenshot management and uploading,
 * Fixed encoding of escape sequences (eg \t \n) in config files,
 * Miscellaneous bugfixes,
-* Full changelog available on [GitHub](https://github.com/MultiMC/MultiMC5/blob/develop/changelog.yaml).
+* Full changelog available on [GitHub](https://github.com/MultiMC/Launcher/blob/develop/changelog.yaml).
 
 Many thanks to [@peterixxx](https://twitter.com/peterixxx), [@02JanDal](https://twitter.com/02JanDal) and [Robotbrain](https://twitter.com/skylordelros) for implementing the vast majority of these changes - go give them <small><i class="uk-icon-heart" alt="<3"></i></small>!
 

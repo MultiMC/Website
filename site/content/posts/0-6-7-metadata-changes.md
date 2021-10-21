@@ -31,7 +31,7 @@ This is a much needed change, because the encryption on that domain (v1.meta.mul
 
 - Enabling and disabling mods no longer makes the list forget what was selected.
 
-- [GH-358](https://github.com/MultiMC/MultiMC5/issues/358): Switched all the dialog pages from using buttons in layouts to toolbars.
+- [GH-358](https://github.com/MultiMC/Launcher/issues/358): Switched all the dialog pages from using buttons in layouts to toolbars.
 
     Toolbar buttons are smaller, and the toolbars can overflow buttons into an overflow space. This allows requiring a lot less space for the windows.
 
@@ -45,7 +45,7 @@ This is a much needed change, because the encryption on that domain (v1.meta.mul
 
     Mods, version and the like should now be visible, but most of the controls are disabled until the game closes.
 
-- [GH-2550](https://github.com/MultiMC/MultiMC5/issues/2550), [GH-2722](https://github.com/MultiMC/MultiMC5/issues/2722), [GH-2762](https://github.com/MultiMC/MultiMC5/issues/2762): Mod list sorting is much improved.
+- [GH-2550](https://github.com/MultiMC/Launcher/issues/2550), [GH-2722](https://github.com/MultiMC/Launcher/issues/2722), [GH-2762](https://github.com/MultiMC/Launcher/issues/2762): Mod list sorting is much improved.
 
     You can now sort mods by enabled status.
 

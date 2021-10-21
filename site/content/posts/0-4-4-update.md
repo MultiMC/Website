@@ -6,7 +6,7 @@ date: 2014-11-21
 
 Just a few days ago we released version 0.4.4 of MultiMC 5, today we're already on 0.4.5! These two releases are mainly bug fix updates, but also contain a few new features, some of which are listed below.
 
-See [the changelog](https://github.com/MultiMC/MultiMC5/blob/stable/changelog.md#045) for a full list of changes.
+See [the changelog](https://github.com/MultiMC/Launcher/blob/stable/changelog.md#045) for a full list of changes.
 
 ### Translations
 
