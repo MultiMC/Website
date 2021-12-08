@@ -7,8 +7,9 @@ date: 2021-12-08
 This further refines Microsoft account support, along with small fixes related to modpack platforms and Java runtime detection.
 
 It's also been 10 years since the first release of MultiMC. All background cats are now ready to party!
-
-![Background cat with a party hat](/images/cattiversary.png)
+<p align="center">
+  <img src="/images/cattiversary.png" alt="Background cat with a party hat"/>
+</p>
 
 What comes next, in no particular order:
 
