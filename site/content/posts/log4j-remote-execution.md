@@ -58,3 +58,30 @@ While the defaults are safe, there are some things you can do to ensure this is 
 5. **Check the logs during start to be absolutely sure.**
 
     When starting up an instance, the log4j library versions should be either `2.15.0` or `2.0-beta9-fixed`. Others may not be safe.
+
+    Good example:
+    ```
+	Libraries:
+	...
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-api/2.15.0/log4j-api-2.15.0.jar
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar
+	...
+	```
+
+	Good example:
+	```
+	Libraries:
+	...
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-api/2.0-beta9-fixed/log4j-api-2.0-beta9-fixed.jar
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-core/2.0-beta9-fixed/log4j-core-2.0-beta9-fixed.jar
+	...
+	```
+
+    **BAD** example:
+	```
+	Libraries:
+	...
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-core/2.14.1/log4j-core-2.14.1.jar
+	...
+	```
