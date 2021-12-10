@@ -15,6 +15,7 @@ Single player should be safe.
 MultiMC has a system to automatically update game and mod loader versions.
 
 We are using this system to:
+
 - Force all modern versions of Minecraft to use *log4j 2.15.0*, which doesn't have this issue.
 - Force old version of Minecraft to use a patched version of *log4j 2.0-beta9*, which has this issue fixed.
 - Force all mod loaders installed through MultiMC to not bundle any version of *log4j*.
