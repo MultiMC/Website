@@ -1,5 +1,5 @@
 ---
-title: IMPORTANT MESSAGE - SECURITY VULNERABILITY IN MINECRAFT
+title: IMPORTANT MESSAGE - Security vulnereability in Minecraft
 author: peterix
 date: 2021-12-10
 ---
@@ -19,9 +19,11 @@ We are using this system to:
 - Force old version of Minecraft to use a patched version of *log4j 2.0-beta9*, which has this issue fixed.
 - Force all mod loaders installed through MultiMC to not bundle any version of *log4j*.
 
-**Effectively, if you use MultiMC, you should be safe.**
+**Effectively, if you use MultiMC and haven't done anything unusual with it, you should be safe.**
 
-There are some things you can do to ensure this is true in your case:
+## Trust, but verify.
+
+While the defaults are safe, there are some things you can do to ensure this is true in your case.
 
 1. **Make sure you are actually running MultiMC and not some third party fork.**
 
@@ -29,7 +31,9 @@ There are some things you can do to ensure this is true in your case:
 
 2. **Fully restart MultiMC to make it load fresh version metadata.**
 
-    While MultiMC is running, it caches version metadata for that session. Restarting it will purge the cache and make it check the server for version updates.
+    While MultiMC is running, it remembers the descriptions of versions it has seen during that session.
+
+    Restarting it will make it check for updates to all those versions again.
 
 3. **Start all your instances in online mode at least once.**
 
@@ -50,3 +54,7 @@ There are some things you can do to ensure this is true in your case:
     If you actually customized your versions on purpose, you will have to redo that with the updated *log4j* libraries.
 
     If the customized versions came with a modpack and you're not sure how to proceed, contact the modpack author(s) or look for any instructions they may have published.
+
+5. **Check the logs during start to be absolutely sure.**
+
+    When starting up an instance, the log4j library versions should be either `2.15.0` or `2.0-beta9-fixed`. Others may not be safe.
