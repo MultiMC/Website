@@ -23,19 +23,19 @@ We are using this system to:
 
 There are some things you can do to ensure this is true in your case:
 
-1. Make sure you are actually running MultiMC and not some third party fork.
+1. **Make sure you are actually running MultiMC and not some third party fork.**
 
     We cannot vouch for anything that comes from sources other than [multimc.org](https://multimc.org).
 
-2. Fully restart MultiMC to make it load fresh version metadata.
+2. **Fully restart MultiMC to make it load fresh version metadata.**
 
     While MultiMC is running, it caches version metadata for that session. Restarting it will purge the cache and make it check the server for version updates.
 
-3. Start all your instances in online mode at least once.
+3. **Start all your instances in online mode at least once.**
 
     MultiMC needs to download new files to actually apply the fixes. This cannot be done offline.
 
-4. Make sure you haven't customized Minecraft/Liteloader/Forge/Fabric versions in the instance Version page(s).
+4. **Make sure you haven't customized Minecraft/Liteloader/Forge/Fabric versions in the instance Version page(s).**
 
     Customized versions will not automatically update. You may have done this without realizing, so go check:
 
@@ -43,7 +43,7 @@ There are some things you can do to ensure this is true in your case:
       <img src="/images/customized_minecraft_version.png" />
     </p>
 
-    If Minecraft, Forge, Liteloader or Fabric have `(Custom)` in their version like this, select them and press **Revert**.
+    If Minecraft, Forge, Liteloader or Fabric have `(Custom)` in their version like this, select them and press `Revert`.
 
     Do this for every instance.
 
