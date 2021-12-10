@@ -1,0 +1,52 @@
+---
+title: IMPORTANT MESSAGE - SECURITY VULNERABILITY IN MINECRAFT
+author: peterix
+date: 2021-12-10
+---
+
+Hello, you may have seen all kinds of chaos and misunderstanding related to a [security bug in log4j](https://nvd.nist.gov/vuln/detail/CVE-2021-44228) that can allow attackers to run code on your machine.
+
+All versions of the game that use an unpatched or old version of the *log4j* library are susceptible to attacks - if you are running a server, or are connecting to one.
+
+Single player should be safe.
+
+# Fixes in MultiMC
+
+MultiMC has a system to automatically update game and mod loader versions.
+
+We are using this system to:
+- Force all modern versions of Minecraft to use *log4j 2.15.0*, which doesn't have this issue.
+- Force old version of Minecraft to use a patched version of *log4j 2.0-beta9*, which has this issue fixed.
+- Force all mod loaders installed through MultiMC to not bundle any version of *log4j*.
+
+**Effectively, if you use MultiMC, you should be safe.**
+
+There are some things you can do to ensure this is true in your case:
+
+1. Make sure you are actually running MultiMC and not some third party fork.
+
+    We cannot vouch for anything that comes from sources other than [multimc.org](https://multimc.org).
+
+2. Fully restart MultiMC to make it load fresh version metadata.
+
+    While MultiMC is running, it caches version metadata for that session. Restarting it will purge the cache and make it check the server for version updates.
+
+3. Start all your instances in online mode at least once.
+
+    MultiMC needs to download new files to actually apply the fixes. This cannot be done offline.
+
+4. Make sure you haven't customized Minecraft/Liteloader/Forge/Fabric versions in the instance Version page(s).
+
+    Customized versions will not automatically update. You may have done this without realizing, so go check:
+
+    <p align="center">
+      <img src="/images/customized_minecraft_version.png" />
+    </p>
+
+    If Minecraft, Forge, Liteloader or Fabric have `(Custom)` in their version like this, select them and press **Revert**.
+
+    Do this for every instance.
+
+    If you actually customized your versions on purpose, you will have to redo that with the updated *log4j* libraries.
+
+    If the customized versions came with a modpack and you're not sure how to proceed, contact the modpack author(s) or look for any instructions they may have published.
