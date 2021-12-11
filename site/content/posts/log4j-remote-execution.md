@@ -1,5 +1,5 @@
 ---
-title: IMPORTANT MESSAGE - Security vulnereability in Minecraft
+title: IMPORTANT MESSAGE - Security vulnerability in Minecraft
 author: peterix
 date: 2021-12-10
 ---
