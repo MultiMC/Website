@@ -10,13 +10,18 @@ All versions of the game that use an unpatched or old version of the *log4j* lib
 
 Single player should be safe.
 
+----
+
+**NOTE: log4j has been further updated to 2.16.0.**\
+Do not be alarmed by the change from 2.15.0.
+
 # Fixes in MultiMC
 
 MultiMC has a system to automatically update game and mod loader versions.
 
 We are using this system to:
 
-- Force all modern versions of Minecraft to use *log4j 2.15.0*, which doesn't have this issue.
+- Force all modern versions of Minecraft to use *log4j 2.15.0* or newer, which doesn't have this issue.
 - Force old version of Minecraft to use a patched version of *log4j 2.0-beta9*, which has this issue fixed.
 - Force all mod loaders installed through MultiMC to not bundle any version of *log4j*.
 
@@ -58,14 +63,14 @@ While the defaults are safe, there are some things you can do to ensure this is 
 
 5. **Check the logs during start to be absolutely sure.**
 
-    When starting up an instance, the log4j library versions should be either `2.15.0` or `2.0-beta9-fixed`. Others may not be safe.
+    When starting up an instance, the log4j library versions should be either `2.16.0` or `2.0-beta9-fixed`. Others may not be safe.
 
     Good example:
     ```
 	Libraries:
 	...
-	/MultiMC/libraries/org/apache/logging/log4j/log4j-api/2.15.0/log4j-api-2.15.0.jar
-	/MultiMC/libraries/org/apache/logging/log4j/log4j-core/2.15.0/log4j-core-2.15.0.jar
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-api/2.16.0/log4j-api-2.16.0.jar
+	/MultiMC/libraries/org/apache/logging/log4j/log4j-core/2.16.0/log4j-core-2.16.0.jar
 	...
 	```
 
