@@ -77,7 +77,7 @@ In general, this should make MultiMC much more forgiving towards various tempora
 
 - Removed Mojang services status information from the main window - the status is no longer provided by Mojang.
 
-- It is now possible to turn of global tracking of play time.
+- It is now possible to turn off global tracking of play time.
 
 ### Technical changes
 
