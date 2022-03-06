@@ -1,7 +1,7 @@
 ---
 title: Migration to Microsoft account is required
 author: peterix
-date: 2020-03-06T12:00:00+02:00
+date: 2022-03-06T12:00:00+02:00
 ---
 
 By now you've probably heard the news that Mojang is migrating everyone's Minecraft accounts to Microsoft accounts. The date when Mojang accounts will stop working is around the corner now - it is the 10th of March, 4 days from now.
