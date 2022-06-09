@@ -35,6 +35,7 @@ Aside from these changes, the release brings some general fixes.
 ### Next steps
 
 Obviously, we want CurseForge import back. Aside from that (in rough order of importance):
+
 - Switch release model from distinct development and stable builds to a stream of builds with some of them promoted to stable.
 - Proper support for M1 Apple hardware, and ARM pletforms in general.
 - Complete rework of Java runtime management.
