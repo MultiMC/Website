@@ -19,7 +19,7 @@ date: 2016-01-22
 
 Because of the reverted Qt version, OSX 10.7 *might* work again. If it does, please do tell, it would help with figuring out what went wrong there :)
 
-[The full changelog is available on github.](https://github.com/MultiMC/MultiMC5/blob/7ca9f92343e2fb2a15d278b08f7244838e74a5d8/changelog.md)
+[The full changelog is available on github.](https://github.com/MultiMC/Launcher/blob/7ca9f92343e2fb2a15d278b08f7244838e74a5d8/changelog.md)
 
 ## The future
 
@@ -30,7 +30,7 @@ Considering the generally huge gaps between the last releases, the future of Mul
 * Release often.
 * Integrating the existing code written for the previous big features in a sensible way.
 
-We are in the process of moving the existing suggestions from [github](https://github.com/MultiMC/MultiMC5/labels/feature), where they got really messy, to a [much more manageable list on workflowy](https://workflowy.com/s/2EyDMcp7CU).
+We are in the process of moving the existing suggestions from [github](https://github.com/MultiMC/Launcher/labels/feature), where they got really messy, to a [much more manageable list on workflowy](https://workflowy.com/s/2EyDMcp7CU).
 
 Once this is complete, we'll post a poll about what should be the focus of future releases. Feel free to review the list(s) and contact us on IRC, reddit, discord or through github issues!
 

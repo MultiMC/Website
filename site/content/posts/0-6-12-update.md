@@ -23,13 +23,13 @@ We've added a whole bunch of new modpack platforms to pick from right into the n
 
 - Added a CurseForge pack browser
 
-- [GH-3095](https://github.com/MultiMC/MultiMC5/issues/3095): Added an FTB pack browser
+- [GH-3095](https://github.com/MultiMC/Launcher/issues/3095): Added an FTB pack browser
 
-    Temporarily, MultiMC ignores download failures for FTB packs ([GH-3304](https://github.com/MultiMC/MultiMC5/issues/3304)). This is because the platform has consistency issues.
+    Temporarily, MultiMC ignores download failures for FTB packs ([GH-3304](https://github.com/MultiMC/Launcher/issues/3304)). This is because the platform has consistency issues.
 
-- [GH-469](https://github.com/MultiMC/MultiMC5/issues/469): Added a Technic/Solder pack browser
+- [GH-469](https://github.com/MultiMC/Launcher/issues/469): Added a Technic/Solder pack browser
 
-- [GH-405](https://github.com/MultiMC/MultiMC5/issues/405): Added a ATLauncher pack browser
+- [GH-405](https://github.com/MultiMC/Launcher/issues/405): Added a ATLauncher pack browser
 
 ### Other changes
 
@@ -39,29 +39,29 @@ We've added a whole bunch of new modpack platforms to pick from right into the n
 
 - Skins (the part used for account icons) are now rendered with the overlay on.
 
-- [GH-3130](https://github.com/MultiMC/MultiMC5/issues/3130): Skin upload has been switched over to the new Mojang API and should have less issues.
+- [GH-3130](https://github.com/MultiMC/Launcher/issues/3130): Skin upload has been switched over to the new Mojang API and should have less issues.
 
 - MultiMC now shows world icons and allows resetting world icons in `View Worlds`.
 
-- [GH-3229](https://github.com/MultiMC/MultiMC5/issues/3229): Copy seed button has been updated to be compatible with newer versions of the game.
+- [GH-3229](https://github.com/MultiMC/Launcher/issues/3229): Copy seed button has been updated to be compatible with newer versions of the game.
 
-- [GH-3427](https://github.com/MultiMC/MultiMC5/issues/3427): `View Worlds` now has a very simple `Datapacks` button - it just opens the system file browser.
+- [GH-3427](https://github.com/MultiMC/Launcher/issues/3427): `View Worlds` now has a very simple `Datapacks` button - it just opens the system file browser.
 
-- [GH-3189](https://github.com/MultiMC/MultiMC5/issues/3189): Updated nbt library - this makes `View Worlds` work properly again for newer versions of the game.
+- [GH-3189](https://github.com/MultiMC/Launcher/issues/3189): Updated nbt library - this makes `View Worlds` work properly again for newer versions of the game.
 
 - Fixed online saving in Classic versions.
 
-- [GH-3131](https://github.com/MultiMC/MultiMC5/issues/3131): Fixed not working with proxy ports greater than 32767.
+- [GH-3131](https://github.com/MultiMC/Launcher/issues/3131): Fixed not working with proxy ports greater than 32767.
 
 - Proxy login details are no longer logged in files.
 
-- [GH-3467](https://github.com/MultiMC/MultiMC5/issues/3467): The launch could stall in the ScanModFolders task if the mod folders didn't exist yet.
+- [GH-3467](https://github.com/MultiMC/Launcher/issues/3467): The launch could stall in the ScanModFolders task if the mod folders didn't exist yet.
 
-- [GH-3602](https://github.com/MultiMC/MultiMC5/issues/3602): Pre-launch commands could fail on first launch of the instance because the .minecraft folder has not been created yet.
+- [GH-3602](https://github.com/MultiMC/Launcher/issues/3602): Pre-launch commands could fail on first launch of the instance because the .minecraft folder has not been created yet.
 
 ### Technical changes
 
-- [GH-3234](https://github.com/MultiMC/MultiMC5/issues/3234): At build time, the meta URL can be changed.
+- [GH-3234](https://github.com/MultiMC/Launcher/issues/3234): At build time, the meta URL can be changed.
 
 - Removed some hacks previously required to get Forge working
 

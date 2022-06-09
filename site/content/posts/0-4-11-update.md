@@ -32,7 +32,7 @@ This release contains mainly a workaround for Minecraft 1.9 support and returned
 
     This doesn't apply to every possible issue yet and will be expanded upon in the next release.
 
-[The full changelog is available on github.](https://github.com/MultiMC/MultiMC5/blob/a3cd3d5ff18215a475ed6b5f231f3f02ccd668f7/changelog.md)
+[The full changelog is available on github.](https://github.com/MultiMC/Launcher/blob/a3cd3d5ff18215a475ed6b5f231f3f02ccd668f7/changelog.md)
 
 ## The future
 

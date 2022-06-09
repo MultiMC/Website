@@ -43,7 +43,7 @@ So, happy New Year everyone, let the madness begin!
 
     The Curse import functionality is there thanks to the work [@Dries007](https://twitter.com/driesk007) and [@NikkiAI](https://twitter.com/NikkyAI) have done on [CurseMeta](https://cursemeta.dries007.net/).
 
-- [GH-1314](https://github.com/MultiMC/MultiMC5/issues/1314): MultiMC now allows replacing the main jar in an instance without having to mod the Mojang jars.
+- [GH-1314](https://github.com/MultiMC/Launcher/issues/1314): MultiMC now allows replacing the main jar in an instance without having to mod the Mojang jars.
 
     This goes along with changing the wording of the jar mod button to make it clear that it adds files to the main Minecraft jar instead of installing mod files with the `.jar` extension.
 
@@ -56,13 +56,13 @@ So, happy New Year everyone, let the madness begin!
 
     Many people had issues finding the settings and instead ended up using the per-instance overrides. The main toolbar now has labels and the per-instance overrides have been deemphasized by removing the direct path to them from the main window. In general, it should be easier to find the right settings menu without getting things completely wrong on the first try.
 
-- [GH-1997](https://github.com/MultiMC/MultiMC5/issues/1997): MultiMC now supports Java 9.
+- [GH-1997](https://github.com/MultiMC/Launcher/issues/1997): MultiMC now supports Java 9.
 
     This does not mean that the current mod loaders and mods do, but you can run Vanilla Minecraft with Java 9 now.
 
     However, Java 9 will come up last in the lists when multiple versions are installed and its use is strongly discouraged.
 
-- [GH-2026](https://github.com/MultiMC/MultiMC5/issues/2026): You can launch Minecraft 1.13 snapshots - and hopefully also 1.13 once it is released.
+- [GH-2026](https://github.com/MultiMC/Launcher/issues/2026): You can launch Minecraft 1.13 snapshots - and hopefully also 1.13 once it is released.
 
     The bare minimum of changes needed for 1.13 to launch has been done.
 
@@ -83,9 +83,9 @@ So, happy New Year everyone, let the madness begin!
 
     This should avoid issues with missing runtime libraries.
 
-- [GH-1855](https://github.com/MultiMC/MultiMC5/issues/1855): The instance window now has an offline launch button.
+- [GH-1855](https://github.com/MultiMC/Launcher/issues/1855): The instance window now has an offline launch button.
 
-- [GH-1886](https://github.com/MultiMC/MultiMC5/issues/1886): UI now clarifies that MultiMC proxy settings do not apply to the game.
+- [GH-1886](https://github.com/MultiMC/Launcher/issues/1886): UI now clarifies that MultiMC proxy settings do not apply to the game.
 
 - It is now possible to package MultiMC on linux without hacks.
 
@@ -122,7 +122,7 @@ So, happy New Year everyone, let the madness begin!
 
 - Instance icons can now be in the SVG format. Also, aspect ratio of SVG icons is now preserved in the instance toolbar.
 
-- [GH-1082](https://github.com/MultiMC/MultiMC5/issues/1082): It is now possible to disable and enable version components (packages) similarly to mods.
+- [GH-1082](https://github.com/MultiMC/Launcher/issues/1082): It is now possible to disable and enable version components (packages) similarly to mods.
 
 - A new material design / flat icon theme has been added.
 
@@ -134,19 +134,19 @@ So, happy New Year everyone, let the madness begin!
 
     MultiMC now uses its new API. If you used a custom API key before, you will need to generate a new one.
 
-- [GH-1873](https://github.com/MultiMC/MultiMC5/issues/1873), [GH-1873](https://github.com/MultiMC/MultiMC5/issues/1873), [GH-1875](https://github.com/MultiMC/MultiMC5/issues/1875) : The main window can now be closed regardless of running instances and running instances directly will not create a main window.
+- [GH-1873](https://github.com/MultiMC/Launcher/issues/1873), [GH-1873](https://github.com/MultiMC/Launcher/issues/1873), [GH-1875](https://github.com/MultiMC/Launcher/issues/1875) : The main window can now be closed regardless of running instances and running instances directly will not create a main window.
 
-- [GH-1854](https://github.com/MultiMC/MultiMC5/issues/1854): MultiMC should no longer crash when the instance is closed while the kill confirmation dialog is open.
+- [GH-1854](https://github.com/MultiMC/Launcher/issues/1854): MultiMC should no longer crash when the instance is closed while the kill confirmation dialog is open.
 
-- [GH-1956](https://github.com/MultiMC/MultiMC5/issues/1956): Launch will abort sooner when important files are missing.
+- [GH-1956](https://github.com/MultiMC/Launcher/issues/1956): Launch will abort sooner when important files are missing.
 
-- [GH-1874](https://github.com/MultiMC/MultiMC5/issues/1874): Instance launching and updating MultiMC are now mutually exclusive.
+- [GH-1874](https://github.com/MultiMC/Launcher/issues/1874): Instance launching and updating MultiMC are now mutually exclusive.
 
     It was possible to do both at the same time, with undefined results.
 
-- [GH-1864](https://github.com/MultiMC/MultiMC5/issues/1864): imgur album creation now works again.
+- [GH-1864](https://github.com/MultiMC/Launcher/issues/1864): imgur album creation now works again.
 
-- [GH-1876](https://github.com/MultiMC/MultiMC5/issues/1876): Various included libraries have been changed to satisfy their license terms.
+- [GH-1876](https://github.com/MultiMC/Launcher/issues/1876): Various included libraries have been changed to satisfy their license terms.
 
     Namely:
     - pack200 (GPL with classpath exception, now a shared library)
@@ -154,9 +154,9 @@ So, happy New Year everyone, let the madness begin!
     - quazip (LGPL, now a shared library)
     - ColumnResizer (replaced with a BSD-3 version).
 
-- [GH-1882](https://github.com/MultiMC/MultiMC5/issues/1882): Update dialog will now save its location and size.
+- [GH-1882](https://github.com/MultiMC/Launcher/issues/1882): Update dialog will now save its location and size.
 
-- [GH-1885](https://github.com/MultiMC/MultiMC5/issues/1885): MultiMC will now correctly download zero-byte files.
+- [GH-1885](https://github.com/MultiMC/Launcher/issues/1885): MultiMC will now correctly download zero-byte files.
 
     No content does not equal no file and a presence of a file can mean the difference between something working or not.
 
@@ -173,11 +173,11 @@ So, happy New Year everyone, let the madness begin!
     Instead of tracking the total size of all downloads, each download gets a fixed share of the progress bar.
     In many cases, the size of files is unknown before a download starts. The change means that the total progress bar size cannot increase as new downloads start and file sizes are discovered.
 
-- [GH-1927](https://github.com/MultiMC/MultiMC5/issues/1927): fix crash bugs related to FML library downloads succeeding multiple times.
+- [GH-1927](https://github.com/MultiMC/Launcher/issues/1927): fix crash bugs related to FML library downloads succeeding multiple times.
 
 - Rare problems with error 201 during Mojang authentication have been fixed.
 
-- [GH-1971](https://github.com/MultiMC/MultiMC5/issues/1971): MultiMC will now no longer check path prefixes when importing instances.
+- [GH-1971](https://github.com/MultiMC/Launcher/issues/1971): MultiMC will now no longer check path prefixes when importing instances.
 
     This has caused more issues than it solved. Now it will simply try to move the files instead of giving up early.
 
@@ -185,11 +185,11 @@ So, happy New Year everyone, let the madness begin!
 
 - Hardcoded link colors in various dialogs and dialog pages have been fixed and now should follow theme palettes.
 
-- [GH-1993](https://github.com/MultiMC/MultiMC5/issues/1993): Minimum and maximum JVM memory settings will now get swapped if set the wrong way.
+- [GH-1993](https://github.com/MultiMC/Launcher/issues/1993): Minimum and maximum JVM memory settings will now get swapped if set the wrong way.
 
     The values self-correct on both settings save and load now.
 
-- [GH-2050](https://github.com/MultiMC/MultiMC5/issues/2050): Fixed behavior of cancel buttons when browsing for paths.
+- [GH-2050](https://github.com/MultiMC/Launcher/issues/2050): Fixed behavior of cancel buttons when browsing for paths.
 
     This affected various settings dialogs and pages, setting the paths to an invalid value when the dialogs were closed with the `Cancel` button.
 

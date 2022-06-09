@@ -29,11 +29,11 @@ This release contains some bugfixes, general UI polish and the beginnings of dir
 - Other Logs page:
 
     - Now has a search bar, just like the main log page.
-    - [GH-604](https://github.com/MultiMC/MultiMC5/issues/604): Uses the same font settings as the main log.
+    - [GH-604](https://github.com/MultiMC/Launcher/issues/604): Uses the same font settings as the main log.
 
 - Icon selection dialog now has a button for opening the icons folder.
 - MultiMC now has a shinier, updated logo.
-- [GH-2150](https://github.com/MultiMC/MultiMC5/issues/2150): Custom commands have been split from the java settings into a new page.
+- [GH-2150](https://github.com/MultiMC/Launcher/issues/2150): Custom commands have been split from the java settings into a new page.
 
     The use of variables in custom commands is now better documented.
     The label shows that they need to be prefixed by `$`.
@@ -46,11 +46,11 @@ This release contains some bugfixes, general UI polish and the beginnings of dir
 
 - VisualVM integration now works when VisualVM is bundled inside the MultiMC folder (uses a relative path).
 - When reinstalling a component, or changing a component version, the custom version is now removed first.
-- [GH-2134](https://github.com/MultiMC/MultiMC5/issues/2134): Fix multiple issues with the skin upload:
+- [GH-2134](https://github.com/MultiMC/Launcher/issues/2134): Fix multiple issues with the skin upload:
 
     - When uploading a skin, the model selection now works correctly again.
     - When the new skin file is specified using the `file://` URL scheme, it will now work correctly.
 
-- [GH-2143](https://github.com/MultiMC/MultiMC5/issues/2143): Mojang services status display now reflects the current set of services.
-- [GH-2154](https://github.com/MultiMC/MultiMC5/issues/2154): MultiMC now ignores the `hidden` flag of instance folders and they should show up correctly.
+- [GH-2143](https://github.com/MultiMC/Launcher/issues/2143): Mojang services status display now reflects the current set of services.
+- [GH-2154](https://github.com/MultiMC/Launcher/issues/2154): MultiMC now ignores the `hidden` flag of instance folders and they should show up correctly.
 - When migrating Legacy instances, custom `minecraft.jar` will be preserved.
