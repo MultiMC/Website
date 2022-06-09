@@ -1,7 +1,7 @@
 ---
 title: 0.6.16 - The Modpack Apocalypse
 author: peterix
-date: 2022-06-10
+date: 2022-06-09
 ---
 
 This brings some good and bad changes to modpack platforms, along with various fixes.
