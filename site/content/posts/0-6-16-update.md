@@ -37,7 +37,7 @@ Aside from these changes, the release brings some general fixes.
 Obviously, we want CurseForge import back. Aside from that (in rough order of importance):
 
 - Switch release model from distinct development and stable builds to a stream of builds with some of them promoted to stable.
-- Proper support for M1 Apple hardware, and ARM pletforms in general.
+- Proper support for M1 Apple hardware, and ARM platforms in general.
 - Complete rework of Java runtime management.
 - Overhauling theming in general, ideally with a repository of themes [like teamspeak has](https://www.myteamspeak.com/).
 - Deconstructing Forge installers and replacing them with something that doesn't randomly break and we can host ourselves.
