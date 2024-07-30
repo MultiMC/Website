@@ -40,6 +40,11 @@ http.createServer(function(request, response) {
     response.setHeader("Pragma", "no-cache");
 
     var uri = url.parse(request.url).pathname, filename = path.join(process.cwd(), uri);
+    if (path.normalize(decodeURI(uri)) !== decodeURI(uri)) {
+        response.statusCode = 403;
+        response.end();
+        return;
+    }
 
     fs.exists(filename, function(exists) {
 
