@@ -1,8 +1,36 @@
 <div class="uk-navbar uk-navbar-attached">
-    <div class="uk-container uk-container-center uk-margin-top uk-margin-bottom">
+    <div class="uk-container uk-container-center uk-margin-top uk-margin-bottom header-inner">
+        <!-- On narrow screens, where the side menu is hidden: the same menu, sliding in -->
+        <a href="#site-menu" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas aria-label="Menu"></a>
         <a href="/" class="uk-navbar-brand">
             <img src="/images/infinity32.png" alt="MultiMC logo" class="uk-float-left">
             <h1 class="top-bar uk-float-left uk-margin-top-remove uk-margin-bottom-remove uk-margin-left">MultiMC</h1>
         </a>
+        <!-- The background cat (the Launcher's catbgrnd2.png), peeking over the page from behind it -->
+        <img src="/images/cat-peek.png" alt="" class="cat-peek" width="125" height="64">
     </div>
 </div>
+<div id="site-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas">
+            {{ partial "menu-items.html" . }}
+        </ul>
+    </div>
+</div>
+<script>
+    // UIkit 2.2 keeps its slide-in menu open when a link in it is picked, and puts the page back
+    // where it was when it closes. A link to a section of this same page (the front page's
+    // Features, Download, ...) closes the menu first, then goes to the section.
+    $("#site-menu").on("click", "a[href*='#']", function (e) {
+        if (this.pathname !== location.pathname) {
+            return;
+        }
+        e.preventDefault();
+        $.UIkit.offcanvas.offcanvas.hide(true);
+        var target = document.getElementById(this.hash.slice(1));
+        history.replaceState(null, "", this.hash);
+        if (target) {
+            target.scrollIntoView();
+        }
+    });
+</script>

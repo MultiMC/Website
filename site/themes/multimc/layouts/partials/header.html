@@ -22,6 +22,45 @@
             background-color: transparent;
             border: none;
         }
+        /* The cat sits on the header's bottom edge, its lower half hidden behind the page */
+        .header-inner {
+            position: relative;
+        }
+        .cat-peek {
+            position: absolute;
+            right: 20px;
+            bottom: -16px;
+            height: 64px;
+            width: auto;
+        }
+        /* Narrow screens, with the menu button: the logo and name centered between the button
+           (left) and a smaller cat (right) */
+        @media (max-width: 767px) {
+            .header-inner {
+                text-align: center;
+            }
+            .header-inner .uk-navbar-toggle {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                height: auto;
+            }
+            .header-inner .uk-navbar-brand {
+                float: none;
+                display: inline-block;
+            }
+            .cat-peek {
+                right: 0;
+                height: 48px;
+            }
+        }
+        /* The narrowest phones: a smaller cat still, so it doesn't sit on the name */
+        @media (max-width: 359px) {
+            .cat-peek {
+                height: 34px;
+            }
+        }
     </style>
 </head>
 <body>

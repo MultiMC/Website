@@ -1,30 +1,5 @@
 <div class="uk-width-medium-1-4 uk-hidden-small">
     <ul data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}" class="uk-nav uk-nav-side">
-        <li class="uk-nav-header">Home</li>
-        <li><a href="/">Overview</a></li>
-        <li><a href="/#Features">Features</a></li>
-        <li><a href="/#Screenshots">Screenshots</a></li>
-        <li><a href="/#Download">Download &amp; Install</a></li>
-        <li><a href="https://files.multimc.org/downloads/builds.html">Builds and earlier versions</a></li>
-        <li><a href="/#Source">Source Code</a></li>
-        <li><a href="http://www.patreon.com/multimc">Support us on Patreon</a></li>
-        <li><a href="/#Discord">Discord server</a></li>
-        <li><a href="/#Branding">Brand guidelines</a></li>
-
-        <li class="uk-nav-header">Blog</li>
-        <li><a href="/posts/index.html">Recent posts</a></li>
-        <li style="list-style: none; display: inline">
-            <ul class="uk-nav-sub">
-                {{ range first 5 ( where .Site.RegularPages "Type" "posts") }}
-                    {{ .Render "menu" }}
-                {{ end }}
-            </ul>
-        </li>
-
-        <li class="uk-nav-header">External links</li>
-        <li><a href="https://github.com/MultiMC/Launcher/wiki/FAQ" target="_blank">FAQ on Github</a></li>
-        <li><a href="https://discord.gg/multimc" target="_blank">Voice/Chat on Discord</a></li>
-        <li><a href="https://github.com/MultiMC/Launcher/issues" target="_blank">Bug Tracker</a></li>
-        <li><a href="https://www.reddit.com/r/MultiMC/" target="_blank">MultiMC subreddit</a></li>
+        {{ partial "menu-items.html" . }}
     </ul>
 </div>
