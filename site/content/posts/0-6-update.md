@@ -109,10 +109,10 @@ So, happy New Year everyone, let the madness begin!
 
 - There are some under the hood improvements for ancient Minecraft versions and versions not provided by Mojang.
 
-      - The `haspaid` parameter is set for the applet wrapper.
-      - MultiMC will prefer to use `.minecraft` instead of `minecraft` folder inside the instances now.
-      - There is some preliminary support for classic multiplayer - see [this workflowy list](https://workflowy.com/s/2EyDMcp7CU#/1cbfc198cf28) for details.
-      - A new `noapplet` trait has been added to allow running legacy Minecraft versions without the applet wrapper.
+    - The `haspaid` parameter is set for the applet wrapper.
+    - MultiMC will prefer to use `.minecraft` instead of `minecraft` folder inside the instances now.
+    - There is some preliminary support for classic multiplayer - see [this workflowy list](https://workflowy.com/s/2EyDMcp7CU#/1cbfc198cf28) for details.
+    - A new `noapplet` trait has been added to allow running legacy Minecraft versions without the applet wrapper.
 
 - Mods without changed metadata (Example Mod) are now listed under their filename instead.
 

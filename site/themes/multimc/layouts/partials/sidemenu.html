@@ -12,10 +12,10 @@
         <li><a href="/#Branding">Brand guidelines</a></li>
 
         <li class="uk-nav-header">Blog</li>
-        <li><a href="/posts.html">Recent posts</a></li>
+        <li><a href="/posts/index.html">Recent posts</a></li>
         <li style="list-style: none; display: inline">
             <ul class="uk-nav-sub">
-                {{ range first 5 ( where .Site.Pages "Type" "posts") }}
+                {{ range first 5 ( where .Site.RegularPages "Type" "posts") }}
                     {{ .Render "menu" }}
                 {{ end }}
             </ul>
