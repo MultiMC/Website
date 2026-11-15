@@ -99,7 +99,7 @@ This is the top priority.
 
 For linux compatibility, display scaling on all systems and better visual themes on Windows.
 
-### big improvements to mod platform features
+### Big improvements to mod platform features
 
 Installing individual mods needs to be added. So is updating modpacks, regardless of platform where they came from.
 
