@@ -68,9 +68,9 @@ So, I will be adding new variants of MultiMC:
 
 - ARM64 builds on all systems
 
-    This includes modern Apple devices
+    This includes modern Apple devices.
 
-- Using newer versions of Qt6 on all systems.
+- Using newer versions of Qt 6 on all systems.
 
     This should fix the rest of the display scaling issues, beyond the Qt 5.15 improvements.
     And it should also get us back to a good state on Linux systems, where Qt 5 is being deprecated.
