@@ -3,8 +3,6 @@ title: A new start
 author: peterix
 date: 2026-11-15T23:00:00+01:00
 ---
-## Hello again!
-
 It's been quite a while and a lot has happened in my life in the past few years. 
 
 * The whole story with people making GPL forks left me utterly disgusted with open source development.
@@ -30,7 +28,7 @@ I want to make it the best possible version of itself, with no exceptions.
 
 Generally, I have invested heavily into being able to ship large, numerous changes.
 
-### Themes
+## Themes
 
 You may have noticed that MultiMC now has a fairly comprehensive visual theme system.
 
@@ -42,7 +40,7 @@ There is also an editor for the themes, which gives you immediate response when 
 
 I plan to set up an online catalog of themes (and possibly more in the future), similar to what you would find on some Linux systems, accessible directly from the launcher.
 
-### The updater
+## The updater
 
 On the first start (or after an update from the old version), you will be greeted by a choice from three different update tiers:
 
@@ -62,7 +60,7 @@ On the first start (or after an update from the old version), you will be greete
 
 You can always change that in the settings afterwards.
 
-### New platforms
+## New platforms
 
 Aside from that, you may also notice that you will be offered an upgrade to new variants of MultiMC builds. Until now, we have been building for some **very** old operating systems and computers. I do not want to drop this level of support, but I also want to bring MultiMC into the current decade.
 
@@ -81,7 +79,7 @@ Quite a bit of work went into making this easy, with the updater and a custom CI
 
 The immediate change is that on Windows, there is a variant that drops XP and Vista support, and has better handling of display scaling. We've had that in the background, but now it is offered automatically.
 
-### Translations
+## Translations
 
 It is now possible to translate the various dialog windows and parts of the UI that come from the UI toolkit we use.
 
@@ -100,8 +98,9 @@ All of this is **very** doable.
 - Qt 6 builds - mainly because of Linux compatibility
 
 - Big improvements to mod platform features
-  - Installing individual mods
-  - Updating modpacks, regardless of platform where they came from
+
+    Installing individual mods needs to be added.
+    So is updating modpacks, regardless of platform where they came from.
 
 - More mod platforms. Especially CurseForge
 - A theme store
