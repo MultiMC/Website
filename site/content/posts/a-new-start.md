@@ -87,28 +87,33 @@ It is now possible to translate the various dialog windows and parts of the UI t
 
 All of this is **very** doable.
 
-- Handling of Java runtimes
+### Handling of Java runtimes
 
-    With so many Java versions we need to deal with, it's to the point where this is a dealbreaker.
+With so many Java versions we need to deal with, it's to the point where this is a dealbreaker.
 
-    MultiMC's current Java handling was fine when all we had was Java 7 and 8.
+MultiMC's current Java handling was fine when all we had was Java 7 and 8.
 
-    This is the top priority.
+This is the top priority.
 
-- Qt 6 builds - mainly because of Linux compatibility
+### Qt 6 builds
 
-- Big improvements to mod platform features
+For linux compatibility, display scaling on all systems and better visual themes on Windows.
 
-    Installing individual mods needs to be added.
-    So is updating modpacks, regardless of platform where they came from.
+### big improvements to mod platform features
 
-- More mod platforms. Especially CurseForge
-- A theme store
+Installing individual mods needs to be added. So is updating modpacks, regardless of platform where they came from.
 
-    Similar to https://store.kde.org/browse/
+More mod platforms need to be added. Especially CurseForge.
 
-- Better Linux packaging
+None of these are new ideas, and have been implemented elsewhere. So, you know what to expect.
 
-    Some work has been done already, but it's nowhere near enough.
 
-    I have some plans that [might change Linux packaging altogether](https://github.com/MultiMC/abipak). We'll see where that goes, but the idea is sound.
+### A theme store
+
+Similar to https://store.kde.org/browse/
+
+### Better Linux packaging
+
+Some work has been done already, but it's nowhere near enough.
+
+I have some plans that [might change Linux packaging altogether](https://github.com/MultiMC/abipak). We'll see where that goes, but the idea is sound.
